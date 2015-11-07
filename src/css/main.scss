@@ -61,6 +61,7 @@
   }
 }
 
+/* Welcome banner */
 #welcome {
   height: 100vh;
   max-width: 100%;
@@ -89,6 +90,7 @@
   .rocket {
     height: 45vh;
 
+    // make rocket smaller on small screens
     @include media-breakpoint-down(sm) {
       height: 35vh;
     }
@@ -100,6 +102,7 @@
     padding: 0 0 $spacer 0;
     margin: 0;
 
+    // make h1 smaller on small screens
     @include media-breakpoint-down(sm) {
       font-size: 40px;
     }
@@ -109,12 +112,14 @@
     padding-bottom: $spacer * 3;
     font-size: 40px;
 
+    // make h2 smaller in small screens
     @include media-breakpoint-down(sm) {
       padding-bottom: $spacer;
       font-size: 30px;
     }
   }
 
+  // center h1, h2 and rocket on small screens
   @include media-breakpoint-down(sm) {
     text-align: center;
   }
@@ -131,6 +136,7 @@
     }
   }
 
+  // container containing h1, h2 and rocket
   .container {
     position: relative;
     top: 50%;
@@ -138,6 +144,7 @@
     z-index: 100;
   }
 
+  // black background
   .outer-space {
     position: absolute;
     min-width: 100%;
@@ -145,6 +152,7 @@
     z-index: 0;
   }
 
+  // blue background (overlays black one)
   .blue-bg {
     background-color: #2d3f50;
     position: absolute;
