@@ -162,6 +162,19 @@
   }
 }
 
+.featurette {
+  img {
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      padding: $spacer 0;
+    }
+  }
+}
+
 footer {
-  margin-bottom: 200rem;
+  margin-top: 4 * $spacer;
+  padding-top: 2 * $spacer;
+  padding-bottom: 20 * $spacer;
+  color: #fff;
+  background-color: #2d3f50;
 }

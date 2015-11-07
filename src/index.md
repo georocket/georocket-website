@@ -27,6 +27,39 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7">
+  <h2 class="featurette-heading">Data store for geospatial files.</h2>
+  <p class="lead">GeoRocket can store geospatial files such as <em>3D city models</em> (CityGML),
+  <em>orthophotos</em> (GeoTIFF) or <em>GML files</em>. Any file saved in GeoRocket can be completely restored later.
+  No information is lost.</p>
+  <p class="lead">Multiple files can be combined to a complex scene. For example, upload a CityGML file containing your
+  3D city model and another one containing your digital terrain model. GeoRocket will merge the files
+  when you retrieve them.</p>
+</div>
+<div class="col-md-5">
+  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/geospatial-files.svg" alt="GeoRocket stores geospatial files">
+</div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+<div class="col-md-7 col-md-push-5">
+  <h2 class="featurette-heading">Spatial queries.</h2>
+  <p class="lead">Powered by popular Open-Source framework <a href="https://www.elastic.co">Elasticsearch</a>,
+  GeoRocket offers a wide range of <em>high-speed search features</em>. You can perform spatial queries and search for
+  attributes, layers and tags.</p>
+  <p class="lead">GeoRocket will select only those features in the data store that match your request. They
+  will be merged in their original form to a valid geospatial file.</p>
+</div>
+<div class="col-md-5 col-md-pull-7">
+  <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x300" alt="Generic placeholder image">
+</div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+<div class="col-md-7">
   <h2 class="featurette-heading">High-performance. <span class="text-muted">Made for the Cloud.</span></h2>
   <p class="lead">GeoRocket has been designed to be <em>high-performance</em> and <em>scalable</em>.
   It is extremely fast&mdash;no matter if you run it on a single machine or in the Cloud.</p>
@@ -34,7 +67,7 @@ template: page.html
   a large number of parallel requests without becoming unresponsive.</p>
 </div>
 <div class="col-md-5">
-  <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x300" alt="Generic placeholder image">
+  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/made-for-cloud.svg" alt="GeoRocket is made for the Cloud">
 </div>
 </div>
 
