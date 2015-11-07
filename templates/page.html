@@ -10,26 +10,34 @@
 
 <body>
 
+<div class="navbar-container">
 <div class="container">
-  <nav class="navbar navbar-light">
-    <a class="navbar-brand" href="#">GeoRocket</a>
-    <ul class="nav navbar-nav pull-right">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
+  <nav class="navbar navbar-light navbar-static-top">
+    <a class="navbar-brand" href="{{ site.url }}/"><img src="{{ site.url }}/images/logo_light.svg" height="60px"></a>
+    <button class="navbar-toggler hidden-md-up pull-right" type="button">
+      &#9776;
+    </button>
+    <ul class="nav navbar-nav pull-right hidden-sm-down">
       <li class="nav-item">
         <a class="nav-link" href="#">Downloads</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#">Showcases</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Docs</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</span></a>
       </li>
     </ul>
   </nav>
 </div>
+</div>
+
+{{ contents | safe }}
 
 <div class="container">
-  {{ contents | safe }}
-
   <footer>
     <p>&copy; {{ site.time }} Fraunhofer Institute for Computer Graphics Research IGD
   </footer>
@@ -37,6 +45,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+<!-- TODO use bower package -->
+<script src="jquery.scrollme.min.js"></script>
 
 </body>
 </html>
