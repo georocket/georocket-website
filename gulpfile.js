@@ -12,7 +12,7 @@ var serveStatic = require("serve-static");
 var Metalsmith = require("metalsmith");
 var assetFile = require("./assetFile");
 var define = require("metalsmith-define");
-var markdown = require("metalsmith-markdown");
+var markdown = require("metalsmith-markdown-remarkable");
 var sass = require("metalsmith-sass");
 var templates = require("./templates");
 
@@ -53,8 +53,9 @@ function build(done, dev) {
 
     // convert markdown to HTML
     .use(markdown({
-        // use smart typographic punctuation for quotes, dashes, etc.
-        smartypants: true
+      html: true,
+      linkify: true,
+      typographer: true
     }))
 
     // apply template engine to all files

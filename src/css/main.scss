@@ -11,10 +11,17 @@
 }
 
 .navbar-container {
+  background-color: $brand-dark-blue;
+  margin-bottom: 3 * $spacer;
+}
+
+.page-home .navbar-container {
   position: absolute;
   z-index: 1000;
   width: 100%;
   top: $spacer * 2;
+  background-color: transparent;
+  margin-bottom: 0;
 }
 
 .navbar-light {
@@ -217,6 +224,15 @@ button.download {
   h5 {
     color: $gray;
   }
+}
+
+pre code {
+  background-color: $brand-dark-blue;
+  color: #fff;
+  padding: $spacer;
+  width: 100%;
+  display: block;
+  border-radius: $border-radius;
 }
 
 footer {

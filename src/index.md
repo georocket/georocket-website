@@ -1,4 +1,5 @@
 ---
+id: home
 template: page.html
 ---
 

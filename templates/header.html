@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>{% if title %}{{ title }} | {% endif %}GeoRocket</title>
+<link rel="stylesheet" href="{{ site.url }}/css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body{% if id %} class="page-{{ id }}"{% endif %}>
+
+<div class="navbar-container">
+<div class="container">
+  <nav class="navbar navbar-light navbar-static-top">
+    <a class="navbar-brand" href="{{ site.url }}/"><img src="{{ site.url }}/images/logo_light.svg" height="60px"></a>
+    <button class="navbar-toggler hidden-md-up pull-right" type="button">
+      &#9776;
+    </button>
+    <ul class="nav navbar-nav pull-right hidden-sm-down">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Downloads</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Showcases</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.url }}/docs">Docs</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</span></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
