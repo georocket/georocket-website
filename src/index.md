@@ -12,7 +12,7 @@ template: page.html
     <div class="col-md-8">
       <h1>It's not rocket science!</h1>
       <h2>GeoRocket is a high-performance data store for geospatial files</h2>
-      <button type="button" class="btn btn-secondary hidden-sm-down">Download v1.0.0-SNAPSHOT</button>
+      <button type="button" class="btn btn-secondary hidden-sm-down download">Download v1.0.0-SNAPSHOT</button>
     </div>
     <div class="col-md-4">
       <img class="rocket" src="{{ site.url }}/images/rocket.svg">
@@ -27,7 +27,7 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7">
-  <h2 class="featurette-heading">Data store for geospatial files.</h2>
+  <h2 class="featurette-heading"><span class="plus">+</span> Data storage</h2>
   <p class="lead">GeoRocket can store geospatial files such as <em>3D city models</em> (CityGML),
   <em>orthophotos</em> (GeoTIFF) or <em>GML files</em>. Any file saved in GeoRocket can be completely restored later.
   No information is lost.</p>
@@ -44,7 +44,7 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7 col-md-push-5">
-  <h2 class="featurette-heading">Spatial queries.</h2>
+  <h2 class="featurette-heading"><span class="plus">+</span> Spatial queries</h2>
   <p class="lead">Powered by popular Open-Source framework <a href="https://www.elastic.co">Elasticsearch</a>,
   GeoRocket offers a wide range of <em>high-speed search features</em>. You can perform spatial queries and search for
   attributes, layers and tags.</p>
@@ -60,7 +60,7 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7">
-  <h2 class="featurette-heading">High-performance. <span class="text-muted">Made for the Cloud.</span></h2>
+  <h2 class="featurette-heading"><span class="plus">+</span> Made for the Cloud</span></h2>
   <p class="lead">GeoRocket has been designed to be <em>high-performance</em> and <em>scalable</em>.
   It is extremely fast&mdash;no matter if you run it on a single machine or in the Cloud.</p>
   <p class="lead">GeoRocket is <em>reactive</em>. That means it can handle big files and
@@ -75,7 +75,7 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7 col-md-push-5">
-  <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+  <h2 class="featurette-heading"><span class="plus">+</span> Open-Source</span></h2>
   <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
