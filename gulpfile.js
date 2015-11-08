@@ -10,6 +10,7 @@ var prettyHrtime = require("pretty-hrtime");
 var serveStatic = require("serve-static");
 
 var Metalsmith = require("metalsmith");
+var assetFile = require("./assetFile");
 var define = require("metalsmith-define");
 var markdown = require("metalsmith-markdown");
 var sass = require("metalsmith-sass");
@@ -60,6 +61,10 @@ function build(done, dev) {
     .use(templates({
       dev: dev
     }))
+
+    // copy required javascripts
+    .use(assetFile(path.join(bowerrc.directory, "scrollme/jquery.scrollme.min.js"),
+        "js/jquery.scrollme.min.js"))
 
     // convert scss to css
     .use(sass({
