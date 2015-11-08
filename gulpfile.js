@@ -13,7 +13,7 @@ var Metalsmith = require("metalsmith");
 var define = require("metalsmith-define");
 var markdown = require("metalsmith-markdown");
 var sass = require("metalsmith-sass");
-var templates = require("metalsmith-templates");
+var templates = require("./templates");
 
 var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
 
@@ -45,9 +45,9 @@ function build(done, dev) {
 
     // apply template engine to markdown files only (apply in-place)
     .use(templates({
-      engine: "nunjucks",
       pattern: "**/*.md",
-      inPlace: true
+      inPlace: true,
+      dev: dev
     }))
 
     // convert markdown to HTML
@@ -58,7 +58,7 @@ function build(done, dev) {
 
     // apply template engine to all files
     .use(templates({
-      engine: "nunjucks"
+      dev: dev
     }))
 
     // convert scss to css

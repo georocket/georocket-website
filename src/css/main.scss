@@ -222,7 +222,28 @@ button.download {
 footer {
   margin-top: 4 * $spacer;
   padding-top: 2 * $spacer;
-  padding-bottom: 20 * $spacer;
+  padding-bottom: 10 * $spacer;
   color: #fff;
   background-color: $brand-dark-blue;
+
+  h5 {
+    text-transform: uppercase;
+    color: $gray-lighter;
+  }
+
+  a {
+    color: $brand-orange;
+
+    &:focus {
+      color: $brand-orange;
+    }
+
+    &:hover, &:active {
+      color: #fff;
+    }
+  }
+
+  .fraunhofer-logo {
+    max-height: 4rem;
+  }
 }
