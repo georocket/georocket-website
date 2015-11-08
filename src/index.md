@@ -52,7 +52,7 @@ template: page.html
   will be merged in their original form to a valid geospatial file.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
-  <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x300" alt="Generic placeholder image">
+  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/spatial-queries.svg" alt="Spatial queries">
 </div>
 </div>
 
@@ -79,7 +79,7 @@ template: page.html
   <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
-  <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x300" alt="Generic placeholder image">
+  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
 </div>
 </div>
 
