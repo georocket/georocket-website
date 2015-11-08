@@ -26,7 +26,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .navbar-nav {
@@ -124,18 +124,6 @@
     text-align: center;
   }
 
-  button {
-    font-size: 20px;
-    padding: 10px 20px;
-    background-color: transparent;
-    color: #fff;
-
-    &:hover {
-      background-color: #fff;
-      color: #2d3f50;
-    }
-  }
-
   // container containing h1, h2 and rocket
   .container {
     position: relative;
@@ -162,6 +150,18 @@
   }
 }
 
+button.download {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    color: $brand-dark-blue;
+  }
+}
+
 .featurette {
   img {
     width: 100%;
@@ -169,11 +169,54 @@
       padding: $spacer 0;
     }
   }
+
+  .plus {
+    color: $brand-orange;
+    font-weight: 700;
+  }
 }
 
 .featurette-divider {
-  margin-top: $spacer * 3;
-  margin-bottom: $spacer * 3;
+  margin: $spacer * 3 0;
+}
+
+.home-download-container {
+  background-color: $brand-dark-blue;
+  width: 100%;
+  color: #fff;
+  font-size: $font-size-h2;
+  padding: 3 * $spacer 0;
+  margin: $spacer * 3 0;
+
+  button {
+    float: right;
+  }
+
+  // center contents on small screens
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+
+    button {
+      float: none;
+      margin-top: $spacer;
+    }
+  }
+}
+
+.news-column {
+  border-right: $hr-border-width $hr-border-color solid;
+
+  .lead {
+    padding-bottom: $spacer;
+  }
+
+  button {
+    margin-top: $spacer;
+  }
+
+  h5 {
+    color: $gray;
+  }
 }
 
 footer {

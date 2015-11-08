@@ -86,3 +86,37 @@ template: page.html
 </div>
 </div>
 </div>
+
+<div class="home-download-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        The latest GeoRocket release is version 1.0.0-SNAPSHOT
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="btn btn-secondary download">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 news-column">
+      <h2>News</h2>
+      <p class="lead">Lorem ipsum</p>
+      <h5>2015-11-08</h5>
+      <p><a href="#">GeoRocket on Intergeo 2016</a></p>
+      <h5>2015-11-07</h5>
+      <p><a href="#">GeoRocket on CeBit 2016</a></p>
+      <h5>2015-11-06</h5>
+      <p><a href="#">GeoRocket website repository created</a></p>
+      <button type="button" class="btn btn-secondary">View all</button>
+    </div>
+    <div class="col-md-6">
+      <h2>Something else</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+      <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+    </div>
+  </div>
+</div>
