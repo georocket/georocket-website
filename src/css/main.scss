@@ -171,6 +171,11 @@
   }
 }
 
+.featurette-divider {
+  margin-top: $spacer * 3;
+  margin-bottom: $spacer * 3;
+}
+
 footer {
   margin-top: 4 * $spacer;
   padding-top: 2 * $spacer;
