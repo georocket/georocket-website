@@ -68,7 +68,7 @@
   overflow: hidden;
   margin-bottom: 100px;
   position: relative;
-  background-color: #2d3f50;
+  background-color: $brand-dark-blue;
   color: #fff;
 
   .whiteclouds {
@@ -154,7 +154,7 @@
 
   // blue background (overlays black one)
   .blue-bg {
-    background-color: #2d3f50;
+    background-color: $brand-dark-blue;
     position: absolute;
     width: 100%;
     min-height: 100%;
@@ -181,5 +181,5 @@ footer {
   padding-top: 2 * $spacer;
   padding-bottom: 20 * $spacer;
   color: #fff;
-  background-color: #2d3f50;
+  background-color: $brand-dark-blue;
 }
