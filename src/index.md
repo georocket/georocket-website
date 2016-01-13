@@ -37,7 +37,7 @@ template: page.html
   when you retrieve them.</p>
 </div>
 <div class="col-md-5">
-  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/geospatial-files.svg" alt="GeoRocket stores geospatial files">
+  <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/geospatial-files.svg" alt="GeoRocket stores geospatial files">
 </div>
 </div>
 
@@ -53,7 +53,7 @@ template: page.html
   will be merged in their original form to a valid geospatial file.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
-  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/spatial-queries.svg" alt="Spatial queries">
+  <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/spatial-queries.svg" alt="Spatial queries">
 </div>
 </div>
 
@@ -68,7 +68,7 @@ template: page.html
   a large number of parallel requests without becoming unresponsive.</p>
 </div>
 <div class="col-md-5">
-  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/made-for-cloud.svg" alt="GeoRocket is made for the Cloud">
+  <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/made-for-cloud.svg" alt="GeoRocket is made for the Cloud">
 </div>
 </div>
 
@@ -80,7 +80,7 @@ template: page.html
   <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
-  <img class="featurette-image img-responsive center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
+  <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
 </div>
 </div>
 
