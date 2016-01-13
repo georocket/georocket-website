@@ -1,12 +1,6 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
-        <p>Copyright &copy; {{ site.time | date("YYYY") }} Fraunhofer Institute for Computer Graphics Research IGD</p>
-        <img class="img-responsive fraunhofer-logo" src="{{ site.url }}/images/fraunhofer-light.svg" alt="Fraunhofer logo">
-      </div>
-      <div class="col-sm-4">
-      </div>
       <div class="col-sm-2">
         <h5>Website</h5>
         <ul class="list-unstyled">
@@ -23,6 +17,20 @@
             <a class="nav-link" href="#">About</span></a>
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<footer class="copyright">
+  <div class="container">
+    <div class="row copyright">
+      <div class="col-md-4">
+        <a href="http://www.igd.fraunhofer.de">
+          <img class="img-responsive fraunhofer-logo" src="{{ site.url }}/images/fraunhofer.svg" alt="Fraunhofer logo">
+        </a>
+      </div>
+      <div class="col-md-8">
+        <p class="pull-right">Copyright &copy; 2015-{{ site.time | date("YYYY") }} <a href="http://www.igd.fraunhofer.de">Fraunhofer Institute for Computer Graphics Research IGD</a></p>
       </div>
     </div>
   </div>

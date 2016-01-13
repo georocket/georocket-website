@@ -238,9 +238,10 @@ pre code {
 footer {
   margin-top: 4 * $spacer;
   padding-top: 2 * $spacer;
-  padding-bottom: 10 * $spacer;
+  padding-bottom: 2 * $spacer;
   color: #fff;
   background-color: $brand-dark-blue;
+  font-size: 1.1rem;
 
   h5 {
     text-transform: uppercase;
@@ -261,5 +262,24 @@ footer {
 
   .fraunhofer-logo {
     max-height: 4rem;
+  }
+
+  &.copyright {
+    margin-top: $spacer;
+    padding-top: 0;
+    padding-bottom: 10 * $spacer;
+    background-color: $body-bg;
+    color: $body-color;
+
+    p, img {
+      padding-top: $spacer;
+    }
+
+    a {
+      color: $body-color;
+      &:focus, &:hover, &:active {
+        color: $body-color;
+      }
+    }
   }
 }
