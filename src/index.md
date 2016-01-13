@@ -4,10 +4,10 @@ template: page.html
 ---
 
 <div id="welcome" class="scrollme">
-<img class="whiteclouds animateme" data-when="span" data-from="0" data-to="1" data-translatey="170" src="{{ site.url }}/images/whiteclouds.svg">
-<img class="blueclouds animateme" data-when="span" data-from="0" data-to="1" data-opacity="0.5" data-translatey="370" src="{{ site.url }}/images/blueclouds.svg">
+<img class="whiteclouds animateme" data-when="span" data-from="0" data-to="1" data-translatey="150" data-easing="linear" src="{{ site.url }}/images/whiteclouds.svg">
+<img class="blueclouds animateme" data-when="span" data-from="0" data-to="1" data-opacity="0.5" data-translatey="300" data-easing="linear" src="{{ site.url }}/images/blueclouds.svg">
 <img class="outer-space" src="{{ site.url }}/images/outer-space.svg">
-<div class="blue-bg animateme" data-when="span" data-from="0" data-to="0.35" data-opacity="0"></div>
+<div class="blue-bg animateme" data-when="span" data-from="0.2" data-to="0.5" data-opacity="0" data-easing="linear"></div>
 <div class="container">
   <div class="row">
     <div class="col-md-8">
