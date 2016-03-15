@@ -52,7 +52,7 @@
       .nav-link {
         color: #ccc;
 
-        &:hover {
+        &:hover, &:focus {
           color: #fff;
         }
       }
@@ -60,7 +60,7 @@
       &.active > .nav-link {
         color: #fff;
 
-        &:hover {
+        &:hover, &:focus {
           color: #fff;
         }
       }
