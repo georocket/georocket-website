@@ -20,7 +20,8 @@ var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
 
 var paths = {
   site: "site",
-  src: "src"
+  src: "src",
+  templates: "templates"
 };
 
 function build(done, dev) {
@@ -101,7 +102,10 @@ gulp.task("watch", ["buildDev"], function() {
     gutil.log("Listening on port", gutil.colors.cyan("4000"), "...");
   });
 
-  return gulp.watch([path.join(paths.src, "**", "*")], {}, function() {
+  return gulp.watch([
+      path.join(paths.src, "**", "*"),
+      path.join(paths.templates, "**", "*")
+    ], {}, function() {
     gutil.log("Rebuilding ...");
     var start = process.hrtime();
     build(function() {
