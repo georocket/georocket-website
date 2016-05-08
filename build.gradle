@@ -47,7 +47,9 @@ task extractDocs << {
 
 gulp_build.dependsOn extractDocs, npmInstall
 
-task build(dependsOn: gulp_build)
+task assemble(dependsOn: gulp_build)
+
+task build(dependsOn: assemble)
 
 task clean(type: Delete, dependsOn: gulp_clean) {
     delete buildDir, "node_modules", "bower_components"
