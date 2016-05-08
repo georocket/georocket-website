@@ -1,4 +1,6 @@
+.gradle/
 bower_components/
+build/
 node_modules/
 site/
 *.sublime-workspace

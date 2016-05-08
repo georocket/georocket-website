@@ -1,0 +1,56 @@
+plugins {
+    id "com.moowork.gulp" version "0.12"
+    id "com.moowork.node" version "0.12"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+configurations {
+    docs {
+        transitive = false
+    }
+}
+
+dependencies {
+    docs "io.georocket:georocket-client-api:1.0.0-SNAPSHOT:javadoc"
+    docs "io.georocket:georocket-server-api:1.0.0-SNAPSHOT:javadoc"
+}
+
+gulp {
+    colors = true
+}
+
+node {
+    version = '6.1.0'
+    download = true
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}
+
+task extractDocs << {
+    // extract each 'docs' artifact to a separate directory
+    def docs = new File(buildDir, "docs")
+    configurations.docs.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+        copy {
+            from zipTree(artifact.file)
+            into new File(new File(docs, artifact.name), artifact.moduleVersion.id.version)
+        }
+    }
+}
+
+gulp_build.dependsOn extractDocs, npmInstall
+
+task build(dependsOn: gulp_build)
+
+task clean(type: Delete, dependsOn: gulp_clean) {
+    delete buildDir, "node_modules", "bower_components"
+}
+
+defaultTasks "build"
