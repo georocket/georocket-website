@@ -51,6 +51,8 @@ task assemble(dependsOn: gulp_build)
 
 task build(dependsOn: assemble)
 
+task check(dependsOn: build)
+
 task clean(type: Delete, dependsOn: gulp_clean) {
     delete buildDir, "node_modules", "bower_components"
 }

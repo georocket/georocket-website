@@ -4,5 +4,7 @@ jdk:
   - oraclejdk8
 cache:
   directories:
+  - $HOME/.cache/bower
   - $HOME/.gradle
+  - $HOME/.npm
   - .gradle
