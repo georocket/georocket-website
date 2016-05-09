@@ -29,10 +29,10 @@ template: page.html
 <div class="row featurette">
 <div class="col-md-7">
   <h2 class="featurette-heading"><span class="plus">+</span> Data storage</h2>
-  <p class="lead">GeoRocket can store geospatial files such as <em>3D city models</em> (CityGML),
+  <p>GeoRocket can store geospatial files such as <em>3D city models</em> (CityGML),
   <em>orthophotos</em> (GeoTIFF) or <em>GML files</em>. Any file saved in GeoRocket can be completely restored later.
   No information is lost.</p>
-  <p class="lead">Multiple files can be combined to a complex scene. For example, upload a CityGML file containing your
+  <p>Multiple files can be combined to a complex scene. For example, upload a CityGML file containing your
   3D city model and another one containing your digital terrain model. GeoRocket will merge the files
   when you retrieve them.</p>
 </div>
@@ -46,10 +46,10 @@ template: page.html
 <div class="row featurette">
 <div class="col-md-7 col-md-push-5">
   <h2 class="featurette-heading"><span class="plus">+</span> Spatial queries</h2>
-  <p class="lead">Powered by popular Open-Source framework <a href="https://www.elastic.co">Elasticsearch</a>,
+  <p>Powered by popular Open-Source framework <a href="https://www.elastic.co">Elasticsearch</a>,
   GeoRocket offers a wide range of <em>high-speed search features</em>. You can perform spatial queries and search for
   attributes, layers and tags.</p>
-  <p class="lead">GeoRocket will select only those features in the data store that match your request. They
+  <p>GeoRocket will select only those features in the data store that match your request. They
   will be merged in their original form to a valid geospatial file.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
@@ -62,9 +62,9 @@ template: page.html
 <div class="row featurette">
 <div class="col-md-7">
   <h2 class="featurette-heading"><span class="plus">+</span> Made for the Cloud</span></h2>
-  <p class="lead">GeoRocket has been designed to be <em>high-performance</em> and <em>scalable</em>.
+  <p>GeoRocket has been designed to be <em>high-performance</em> and <em>scalable</em>.
   It is extremely fast&mdash;no matter if you run it on a single machine or in the Cloud.</p>
-  <p class="lead">GeoRocket is <em>reactive</em>. That means it can handle big files and
+  <p>GeoRocket is <em>reactive</em>. That means it can handle big files and
   a large number of parallel requests without becoming unresponsive.</p>
 </div>
 <div class="col-md-5">
@@ -77,7 +77,7 @@ template: page.html
 <div class="row featurette">
 <div class="col-md-7 col-md-push-5">
   <h2 class="featurette-heading"><span class="plus">+</span> Open-Source</span></h2>
-  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">

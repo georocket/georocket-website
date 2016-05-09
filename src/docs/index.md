@@ -1,41 +1,47 @@
 ---
 template: page.html
 title: User documentation
+id: docs
 ---
 
-<div class="container">
+<div class="container container-main">
 <div class="row">
-<div class="col-md-3 col-md-push-9">
+<div class="col-md-12">
 
-#### Table of contents
+# GeoRocket documentation
 
-<ul>
-<li><a href="#">Getting started</a></li>
-<li><a href="#">Command line</a></li>
-</ul>
+<p class="lead">Learn how to use GeoRocket and to integrate it into your
+application.</p>
 
+<div class="card card-block">
+  <h3 class="card-title" id="user-documentation">User documentation</h3>
+  <p class="card-text">The user documentation introduces GeoRocket and
+  its architecture. It describes how to install the server and the client and
+  how to use the command-line interface. It also describes GeoRocket's
+  functionality in detail.</p>
+  <a href="#" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-book-open-page-variant" aria-hidden="true"></i> 1.0.0-SNAPSHOT</a>
 </div>
-<div class="col-md-9 col-md-pull-3">
 
-# User documentation
-
-Lorem ipsum "dolor" sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-
-## Getting started
-
-Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-
-Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu.
-
-## Command line
-
-Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque.
-
-```
-georocket-cli import file.xml
-```
-
-Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-block">
+      <h3 class="card-title" id="client-api">Client API</h3>
+      <p class="card-text">Use the client API to access GeoRocket from your
+      application through a well-defined interface. The client API uses
+      GeoRocket's HTTP interface internally.</p>
+      <a href="{{ site.url }}/docs/georocket-client-api/1.0.0-SNAPSHOT" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-xml" aria-hidden="true"></i> Javadoc 1.0.0-SNAPSHOT</a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-block">
+      <h3 class="card-title" id="server-api">Server API</h4>
+      <p class="card-text">The server API is a collection of interfaces you
+      can implement to add new functionality to GeoRocket or change its
+      behaviour.</p>
+      <a href="{{ site.url }}/docs/georocket-server-api/1.0.0-SNAPSHOT" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-xml" aria-hidden="true"></i> Javadoc 1.0.0-SNAPSHOT</a>
+    </div>
+  </div>
+</div>
 
 </div>
 </div>

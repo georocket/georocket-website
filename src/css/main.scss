@@ -1,6 +1,26 @@
 @import "bootstrap_variables";
 @import "bootstrap_custom";
 
+body:not(.page-home) {
+  h2:not(:first-child) {
+    margin-top: 3rem;
+  }
+}
+
+.container-main {
+  min-height: calc(100vh - 12rem /* footer 1 */ - 14rem /* footer 2 */ - 8rem /* header */ - 1rem /* buffer */);
+}
+
+.page-docs {
+  .lead+.card {
+    margin-top: 2rem;
+  }
+
+  .card {
+    margin-top: 1rem;
+  }
+}
+
 // FIXME remove this workaround as soon as we can overwrite bootstrap variable
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0,0,0,.6);
@@ -166,6 +186,15 @@ button.download {
   &:hover {
     background-color: #fff;
     color: $brand-dark-blue;
+  }
+}
+
+.btn-icon-separate {
+  i {
+    margin-right: 0.4rem;
+    border-right: 1px solid #fff;
+    padding-right: 0.7rem;
+    line-height: 1.5;
   }
 }
 

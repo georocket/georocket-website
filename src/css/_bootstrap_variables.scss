@@ -1,6 +1,7 @@
 // Colors
 //
 
+$brand-primary:             #1965b2;
 $brand-dark-blue:           #2d3f50;
 $brand-orange:              #ee5b1c;
 
@@ -12,6 +13,15 @@ $brand-orange:              #ee5b1c;
 $font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-size-base:             1.25rem;
+
+$lead-font-size:             1.5rem;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-primary-bg:                 #486583;
 
 
 // Navbar

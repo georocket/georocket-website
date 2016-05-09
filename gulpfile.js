@@ -11,6 +11,7 @@ var serveStatic = require("serve-static");
 
 var Metalsmith = require("metalsmith");
 var assetFile = require("./assetFile");
+var assets = require("metalsmith-assets");
 var define = require("metalsmith-define");
 var markdown = require("metalsmith-markdown-remarkable");
 var sass = require("metalsmith-sass");
@@ -21,6 +22,7 @@ var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
 var paths = {
   site: "site",
   src: "src",
+  src_docs: path.join("build", "docs"),
   templates: "templates"
 };
 
@@ -67,6 +69,12 @@ function build(done, dev) {
     // copy required javascripts
     .use(assetFile(path.join(bowerrc.directory, "scrollme/jquery.scrollme.min.js"),
         "js/jquery.scrollme.min.js"))
+
+    // copy javadocs
+    .use(assets({
+      source: paths.src_docs,
+      destination: 'docs'
+    }))
 
     // convert scss to css
     .use(sass({
