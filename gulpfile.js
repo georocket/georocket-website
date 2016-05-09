@@ -22,7 +22,8 @@ var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
 var paths = {
   site: "site",
   src: "src",
-  src_docs: path.join("build", "docs"),
+  src_docs_md: "build/src-gen/georocket-docs-md",
+  src_docs: "build/docs",
   templates: "templates"
 };
 

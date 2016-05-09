@@ -3,4 +3,5 @@ bower_components/
 build/
 node_modules/
 site/
+src/docs/user-documentation/
 *.sublime-workspace

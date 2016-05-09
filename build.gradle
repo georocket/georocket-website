@@ -1,6 +1,18 @@
 plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
     id "com.moowork.gulp" version "0.12"
     id "com.moowork.node" version "0.12"
+}
+
+apply plugin: 'org.asciidoctor.convert'
+
+import org.apache.tools.ant.filters.ConcatFilter
+
+ext {
+    docsSources = new File(buildDir, "docs-sources")
+    docs = new File(buildDir, "docs")
+    src = new File("src")
+    srcGen = new File(buildDir, "src-gen")
 }
 
 repositories {
@@ -17,6 +29,7 @@ configurations {
 }
 
 dependencies {
+    docs "io.georocket:georocket-docs:1.0.0-SNAPSHOT:sources"
     docs "io.georocket:georocket-client-api:1.0.0-SNAPSHOT:javadoc"
     docs "io.georocket:georocket-server-api:1.0.0-SNAPSHOT:javadoc"
 }
@@ -36,25 +49,54 @@ task wrapper(type: Wrapper) {
 
 task extractDocs << {
     // extract each 'docs' artifact to a separate directory
-    def docs = new File(buildDir, "docs")
     configurations.docs.resolvedConfiguration.resolvedArtifacts.each { artifact ->
         copy {
             from zipTree(artifact.file)
-            into new File(new File(docs, artifact.name), artifact.moduleVersion.id.version)
+            into new File(new File(docsSources, artifact.name), artifact.moduleVersion.id.version)
         }
     }
 }
 
-gulp_build.dependsOn extractDocs, npmInstall
-
-task assemble(dependsOn: gulp_build)
-
-task build(dependsOn: assemble)
-
-task check(dependsOn: build)
-
-task clean(type: Delete, dependsOn: gulp_clean) {
-    delete buildDir, "node_modules", "bower_components"
+task copyDocs(dependsOn: [extractDocs, asciidoctor]) << {
+    copy {
+        from new File(asciidoctor.outputDir, "html5")
+        into new File(srcGen, "georocket-docs-html")
+    }
+    copy {
+        from new File(docsSources, "georocket-client-api")
+        into new File(docs, "api/client")
+    }
+    copy {
+        from new File(docsSources, "georocket-server-api")
+        into new File(docs, "api/server")
+    }
 }
+
+task prepareUserDocs(dependsOn: [copyDocs]) << {
+    def docsheader = new File(srcGen, "docsheader.txt")
+    docsheader.text = "---\ntemplate: page.html\ntitle: User documentation\n---\n\n"
+    copy {
+        from new File(srcGen, "georocket-docs-html")
+        into new File(src, "docs/user-documentation")
+        exclude "*.html"
+    }
+    copy {
+        from new File(srcGen, "georocket-docs-html")
+        into new File(src, "docs/user-documentation")
+        include "*.html"
+        filter(ConcatFilter, prepend: docsheader)
+    }
+}
+
+asciidoctor {
+    sourceDir new File(docsSources, "georocket-docs/1.0.0-SNAPSHOT")
+    options header_footer: false
+}
+
+asciidoctor.dependsOn(extractDocs)
+
+gulp_build.dependsOn copyDocs, prepareUserDocs, npmInstall
+
+assemble.dependsOn gulp_build
 
 defaultTasks "build"
