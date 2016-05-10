@@ -5,6 +5,9 @@ body:not(.page-home) {
   h2:not(:first-child), h3:not(:first-child), h4:not(:first-child) {
     margin-top: 3rem;
   }
+  h5:not(:first-child) {
+    margin-top: 1rem;
+  }
 }
 
 .container-main {
@@ -30,6 +33,25 @@ body:not(.page-home) {
 
   .figure {
     display: block;
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+
+  #footnotes {
+    margin-top: 3rem;
+
+    hr {
+      width: 20%;
+      min-width: 6.25em;
+      margin: -.25em 0 .75em 0;
+      border-width: 1px 0 0 0;
+    }
+
+    .footnote {
+      font-size: 1rem;
+    }
   }
 }
 
