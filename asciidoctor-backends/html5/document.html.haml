@@ -1,0 +1,36 @@
+.container.container-main
+  .row
+    .col-md-3.col-md-push-9
+      - if (attr? :toc) && (attr? 'toc-placement', 'auto')
+        #toc{:class=>(attr 'toc-class', 'toc')}
+          %h3#toctitle=attr 'toc-title'
+          =converter.convert self, 'outline'
+    .col-md-9.col-md-pull-3
+      %h1=@header.title
+      %p.lead
+        - if attr? :revnumber
+          %span#revnumber #{((attr 'version-label') || '').downcase} #{attr :revnumber}#{',' if (attr? :revdate)}
+        - if attr? :revdate
+          %span#revdate=attr :revdate
+        - if attr? :revremark
+          %br
+          %span#revremark=attr :revremark
+
+      #content
+        =content
+      - unless !footnotes? || attr?(:nofootnotes)
+        #footnotes
+          %hr
+          - footnotes.each do |fn|
+            .footnote{:id=>['_footnote', fn.index]}
+              = succeed ". #{fn.text}" do
+                %a(href="#_footnoteref_#{fn.index}")=fn.index
+      - unless nofooter
+        #footer
+          #footer-text
+            - if attr? :revnumber
+              = precede %(#{attr 'version-label'} #{attr :revnumber}) do
+                - if attr? 'last-update-label'
+                  %br
+            - if attr? 'last-update-label'
+              #{attr 'last-update-label'} #{attr :localdatetime}

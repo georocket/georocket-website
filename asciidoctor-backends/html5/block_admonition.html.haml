@@ -1,0 +1,14 @@
+- alert_class = 'alert-info'
+- case attr :name
+- when 'note'
+  - alert_class = 'alert-info'
+- when 'tip'
+  - alert_class = 'alert-info'
+- when 'warning'
+  - alert_class = 'alert-warning'
+- when 'caution'
+  - alert_class = 'alert-danger'
+%div.alert{:id=>@id, :class=>alert_class}
+  - if title?
+    .title=title
+  =content

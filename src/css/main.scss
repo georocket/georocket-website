@@ -2,7 +2,7 @@
 @import "bootstrap_custom";
 
 body:not(.page-home) {
-  h2:not(:first-child) {
+  h2:not(:first-child), h3:not(:first-child), h4:not(:first-child) {
     margin-top: 3rem;
   }
 }
@@ -18,6 +18,18 @@ body:not(.page-home) {
 
   .card {
     margin-top: 1rem;
+  }
+}
+
+.page-user-docs {
+  .figure-center {
+    img {
+      display: inline-block;
+    }
+  }
+
+  .figure {
+    display: block;
   }
 }
 

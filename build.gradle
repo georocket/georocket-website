@@ -74,7 +74,7 @@ task copyDocs(dependsOn: [extractDocs, asciidoctor]) << {
 
 task prepareUserDocs(dependsOn: [copyDocs]) << {
     def docsheader = new File(srcGen, "docsheader.txt")
-    docsheader.text = "---\ntemplate: page.html\ntitle: User documentation\n---\n\n"
+    docsheader.text = "---\ntemplate: page.html\ntitle: User documentation\nid: user-docs\n---\n\n"
     copy {
         from new File(srcGen, "georocket-docs-html")
         into new File(src, "docs/user-documentation")
@@ -90,7 +90,7 @@ task prepareUserDocs(dependsOn: [copyDocs]) << {
 
 asciidoctor {
     sourceDir new File(docsSources, "georocket-docs/1.0.0-SNAPSHOT")
-    options header_footer: false
+    options template_dirs: ["${projectDir}/asciidoctor-backends"]
 }
 
 asciidoctor.dependsOn(extractDocs)

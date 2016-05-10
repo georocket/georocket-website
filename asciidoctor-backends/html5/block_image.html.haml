@@ -1,0 +1,9 @@
+%figure.figure{:class=>("figure-#{attr :align}" if attr? :align), :style=>((css_style = [("text-align: #{attr :align}" if attr? :align),
+                       ("float: #{attr :float}" if attr? :float)].compact * '; ').empty? ? nil : css_style)}
+  - if attr? :link
+    %a{:href=>(attr :link)}
+      %img.figure-img.img-fluid{:src=>image_uri(attr :target), :alt=>(attr :alt), :width=>(attr :width), :height=>(attr :height)}
+  - else
+    %img.figure-img.img-fluid{:src=>image_uri(attr :target), :alt=>(attr :alt), :width=>(attr :width), :height=>(attr :height)}
+  - if title?
+    %figcaption.figure-caption=captioned_title
