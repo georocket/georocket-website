@@ -53,6 +53,17 @@ body:not(.page-home) {
       font-size: 1rem;
     }
   }
+
+  #toc {
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+    }
+
+    &>ul {
+      padding-left: 0;
+    }
+  }
 }
 
 // FIXME remove this workaround as soon as we can overwrite bootstrap variable
