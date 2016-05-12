@@ -73,18 +73,9 @@ task copyDocs(dependsOn: [extractDocs, asciidoctor]) << {
 }
 
 task prepareUserDocs(dependsOn: [copyDocs]) << {
-    def docsheader = new File(srcGen, "docsheader.txt")
-    docsheader.text = "---\ntemplate: page.html\ntitle: User documentation\nid: user-docs\n---\n\n"
     copy {
         from new File(srcGen, "georocket-docs-html")
         into new File(src, "docs/user-documentation")
-        exclude "*.html"
-    }
-    copy {
-        from new File(srcGen, "georocket-docs-html")
-        into new File(src, "docs/user-documentation")
-        include "*.html"
-        filter(ConcatFilter, prepend: docsheader)
     }
 }
 
