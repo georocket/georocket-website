@@ -70,6 +70,12 @@ function build(done, dev) {
     // copy required javascripts
     .use(assetFile(path.join(bowerrc.directory, "scrollme/jquery.scrollme.min.js"),
         "js/jquery.scrollme.min.js"))
+    .use(assetFile(path.join(bowerrc.directory, "filament-fixed/fixedfixed.js"),
+        "js/fixedfixed.js"))
+    .use(assetFile(path.join(bowerrc.directory, "filament-sticky/fixedsticky.js"),
+        "js/fixedsticky.js"))
+    .use(assetFile(path.join(bowerrc.directory, "filament-sticky/fixedsticky.css"),
+        "js/fixedsticky.css"))
 
     // copy javadocs
     .use(assets({

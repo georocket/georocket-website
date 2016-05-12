@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "bootstrap": "4.0.0-alpha.2",
-    "scrollme": "~1.1.0"
+    "scrollme": "~1.1.0",
+    "filament-sticky": "^0.1.7"
   }
 }

@@ -63,6 +63,10 @@ body:not(.page-home) {
     &>ul {
       padding-left: 0;
     }
+
+    &.fixedsticky {
+      top: 20px;
+    }
   }
 }
 

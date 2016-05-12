@@ -3,14 +3,16 @@
   template: page.html
   title: User documentation
   id: user-docs
+  stickytoc: true
   ---
 .container.container-main
   .row
     .col-md-3.col-md-push-9
       - if (attr? :toc) && (attr? 'toc-placement', 'auto')
-        #toc{:class=>(attr 'toc-class', 'toc')}
-          %h3#toctitle=attr 'toc-title'
-          =converter.convert self, 'outline'
+        #toccontainer
+          #toc.fixedsticky{:class=>(attr 'toc-class', 'toc')}
+            %h3#toctitle=attr 'toc-title'
+            =converter.convert self, 'outline'
     .col-md-9.col-md-pull-3
       %h1=@header.title
       %p.lead
