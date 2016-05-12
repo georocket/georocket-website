@@ -67,6 +67,14 @@ body:not(.page-home) {
     &.fixedsticky {
       top: 20px;
     }
+
+    li>ul {
+      display: none;
+    }
+
+    .nav-link.active+ul {
+      display: block;
+    }
   }
 }
 

@@ -82,6 +82,10 @@ task prepareUserDocs(dependsOn: [copyDocs]) << {
 asciidoctor {
     sourceDir new File(docsSources, "georocket-docs/1.0.0-SNAPSHOT")
     options template_dirs: ["${projectDir}/asciidoctor-backends"]
+
+    // disable idprefix and set id separator so that the Bootstrap scrollspy
+    // plugin correctly finds headings
+    attributes "idprefix": "", "idseparator": "-"
 }
 
 asciidoctor.dependsOn(extractDocs)
