@@ -65,7 +65,8 @@ template: page.html
   <p>GeoRocket has been designed to be <em>high-performance</em> and <em>scalable</em>.
   It is extremely fast&mdash;no matter if you run it on a single machine or in the Cloud.</p>
   <p>GeoRocket is <em>reactive</em>. That means it can handle big files and
-  a large number of parallel requests without becoming unresponsive.</p>
+  a large number of parallel requests without becoming unresponsive. GeoRocket is
+  powered by <a href="http://vertx.io">Vert.x</a>&mdash;a toolkit for reactive applications.</p>
 </div>
 <div class="col-md-5">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/made-for-cloud.svg" alt="GeoRocket is made for the Cloud">
@@ -76,8 +77,14 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7 col-md-push-5">
-  <h2 class="featurette-heading"><span class="plus">+</span> Open-Source</span></h2>
-  <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  <h2 class="featurette-heading"><span class="plus">+</span> Enterprise and Open-Source</span></h2>
+  <p>GeoRocket exists in two variants. <em>GeoRocket Pro</em> is a professional data store
+  that meets enterprise requirements such as multi-tenancy, versioning or extended
+  search features. Compared to this, the <em>Open-Source</em> version of GeoRocket offers
+  limited functionality but is still powerful enough for most applications.</p>
+
+  <p><em>GeoRocket OSS</em> is hosted on <a href="https://github.com/georocket/georocket">GitHub</a>
+  and licensed under the Apache License, Version 2. Contributions are welcome!</p>
 </div>
 <div class="col-md-5 col-md-pull-7">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
