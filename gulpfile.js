@@ -10,11 +10,19 @@ var prettyHrtime = require("pretty-hrtime");
 var serveStatic = require("serve-static");
 
 var Metalsmith = require("metalsmith");
+var applySlugToPosts = require("./applySlugToPosts");
 var assetFile = require("./assetFile");
 var assets = require("metalsmith-assets");
+var collections = require("metalsmith-collections");
+var dateInFilename = require("metalsmith-date-in-filename");
 var define = require("metalsmith-define");
+var excerpts = require("metalsmith-excerpts");
 var markdown = require("metalsmith-markdown-remarkable");
+var paginate = require("metalsmith-paginate");
+var rename = require("./rename");
 var sass = require("metalsmith-sass");
+var setUrl = require("./setUrl");
+var slugFromFilename = require("./slugFromFilename");
 var templates = require("./templates");
 
 var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
@@ -48,6 +56,35 @@ function build(done, dev) {
       }
     }))
 
+    // extract dates from filename
+    .use(dateInFilename(true))
+
+    // group posts into collection
+    .use(collections({
+      posts: {
+        pattern: "blog/**/2*",
+        sortBy: "date",
+        reverse: true
+      }
+    }))
+
+    // apply pagination
+    .use(paginate({
+      perPage: 6,
+      path: "page"
+    }))
+
+    // rename pagination files
+    .use(rename("page-*.md", function(name) {
+      return name.replace(/page-([0-9]+)/, "blog/$1/index");
+    }))
+
+    // extract slugs from filename
+    .use(slugFromFilename())
+
+    // set 'url' property needed in templates
+    .use(setUrl())
+
     // apply template engine to markdown files only (apply in-place)
     .use(templates({
       pattern: "**/*.md",
@@ -62,20 +99,28 @@ function build(done, dev) {
       typographer: true
     }))
 
+    // move posts to their own subdirectory
+    .use(applySlugToPosts())
+
+    // extract excerpts
+    .use(excerpts())
+
     // apply template engine to all files
     .use(templates({
       dev: dev
     }))
 
     // copy required javascripts
-    .use(assetFile(path.join(bowerrc.directory, "scrollme/jquery.scrollme.min.js"),
-        "js/jquery.scrollme.min.js"))
     .use(assetFile(path.join(bowerrc.directory, "filament-fixed/fixedfixed.js"),
         "js/fixedfixed.js"))
     .use(assetFile(path.join(bowerrc.directory, "filament-sticky/fixedsticky.js"),
         "js/fixedsticky.js"))
     .use(assetFile(path.join(bowerrc.directory, "filament-sticky/fixedsticky.css"),
         "js/fixedsticky.css"))
+    .use(assetFile(path.join(bowerrc.directory, "scrollme/jquery.scrollme.min.js"),
+        "js/jquery.scrollme.min.js"))
+    .use(assetFile(path.join(bowerrc.directory, "jQuery.dotdotdot/src/jquery.dotdotdot.min.js"),
+        "js/jquery.dotdotdot.min.js"))
 
     // copy javadocs
     .use(assets({

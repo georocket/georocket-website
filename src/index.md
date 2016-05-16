@@ -111,15 +111,13 @@ template: page.html
 <div class="container">
   <div class="row">
     <div class="col-md-6 news-column">
-      <h2>News</h2>
-      <p class="lead">Lorem ipsum</p>
-      <h5>2015-11-08</h5>
-      <p><a href="#">GeoRocket on Intergeo 2016</a></p>
-      <h5>2015-11-07</h5>
-      <p><a href="#">GeoRocket on CeBit 2016</a></p>
-      <h5>2015-11-06</h5>
-      <p><a href="#">GeoRocket website repository created</a></p>
-      <button type="button" class="btn btn-secondary">View all</button>
+      <h2>Blog / News</h2>
+      <p class="lead">Stay up to date with the latest from GeoRocket</p>
+      {% for post in collections.posts -%}{% if loop.index0 < 3 -%}
+      <h5>{{ post.date | date('MMMM, Do YYYY') }}</h5>
+      <p><a href="{{ site.url }}/blog/{{ post.slug }}">{{ post.title }}</a></p>
+      {%- endif %}{%- endfor %}
+      <a href="{{ site.url }}/blog" class="btn btn-secondary">View all</a>
     </div>
     <div class="col-md-6">
       <h2>Something else</h2>

@@ -145,6 +145,63 @@ body:not(.page-home) {
   }
 }
 
+.navbar-container.has-title-large {
+  margin-bottom: 0;
+}
+
+.title-large {
+  background-color: $brand-dark-blue;
+  color: #fff;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 5em;
+  margin-bottom: 3em;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+.blog-post-row {
+  // make all columns in the row same height
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+
+.blog-post-block {
+  // make all columns in the row same height (see .blog-post-row)
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  // set max-height for jquery.dotdotdot.js
+  $elh: floor($lead-font-size * $line-height);
+  .ellipsis {
+    display: block;
+    max-height: $elh * 5;
+    overflow: hidden;
+  }
+
+  .date {
+    color: #999;
+  }
+}
+
+.pagination-column {
+    text-align: center;
+}
+
+.pagination a:hover, .pagination a:focus {
+  text-decoration: none;
+}
+
 /* Welcome banner */
 #welcome {
   height: 100vh;
@@ -303,7 +360,7 @@ button.download {
     padding-bottom: $spacer;
   }
 
-  button {
+  .btn {
     margin-top: $spacer;
   }
 

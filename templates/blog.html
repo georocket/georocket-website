@@ -1,0 +1,59 @@
+{% include "header.html" %}
+
+<div class="title-large">
+  <div class="container">
+    <h1>GeoRocket Blog</h1>
+    <p class="lead">Stay up to date with the latest from GeoRocket</p>
+  </div>
+</div>
+
+<!-- blog posts (must be here in the layout instead of the blog/index.md file.
+     otherwise we don't have access to post excerpts) -->
+<div class="container">
+  <div class="row blog-post-row">
+    {% for post in collections.posts %}
+    {% if loop.index0 >= pagination.start and loop.index0 <= pagination.end %}
+    {% if loop.index0 % 3 == 0 and loop.index0 > 0 %}
+    </div>
+    <div class="row blog-post-row">
+    {%- endif %}
+    <div class="col-md-4 blog-post-block">
+      <div class="card card-block">
+      <h3 class="card-title"><a href="{{ site.url }}/blog/{{ post.slug }}">{{ post.title }}</a></h3>
+      <p class="date">{{ post.date | date('MMMM, Do YYYY') }}</p>
+      <span class="ellipsis">{{ post.excerpt | safe }}</span>
+      <p class="keep-reading">&raquo; <a href="{{ site.url }}/blog/{{ post.slug }}">Keep reading</a></p>
+      </div>
+    </div>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 pagination-column">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item{% if not pagination.prev %} disabled{% endif %}">
+            <a class="page-link" href="{% if pagination.prev %}{{ site.url }}{{ pagination.prev.url }}{% else %}#{% endif %}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {% for page in range(0, pagination.total) %}
+          <li class="page-item{% if pagination.num == page + 1 %} active{% endif %}">
+            <a class="page-link" href="{{ site.url }}/blog{% if page > 0 %}/{{ page + 1 }}/{% endif %}">{{ page + 1 }}</a>
+          </li>
+          {% endfor %}
+          <li class="page-item{% if pagination.num >= pagination.total %} disabled{% endif %}">
+            <a class="page-link" href="{% if pagination.num < pagination.total %}{{ site.url }}{{ pagination.next.url }}{% else %}#{% endif %}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}

@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.2",
     "scrollme": "~1.1.0",
-    "filament-sticky": "^0.1.7"
+    "filament-sticky": "^0.1.7",
+    "jQuery.dotdotdot": "^1.8.1"
   }
 }

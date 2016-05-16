@@ -36,7 +36,7 @@
 
 <body{% if id %} class="page-{{ id }}"{% endif %}>
 
-<div class="navbar-container">
+<div class="navbar-container{%if hastitlelarge %} has-title-large{% endif %}">
 <div class="container">
   <nav class="navbar navbar-light navbar-static-top">
     <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#main-navbar">
@@ -54,7 +54,7 @@
         <a class="nav-link" href="{{ site.url }}/docs">Docs</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</span></a>
+        <a class="nav-link" href="{{ site.url }}/blog">Blog</span></a>
       </li>
     </ul>
   </nav>
