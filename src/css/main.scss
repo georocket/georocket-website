@@ -92,6 +92,29 @@ body:not(.page-home) {
   margin-bottom: 3 * $spacer;
 }
 
+#goto-top-button {
+    display: none;
+    font-size: $font-size-base * 2;
+    position: fixed;
+    cursor: pointer;
+    z-index: 500;
+    line-height: 1em;
+    bottom: 40px;
+    right: 40px;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+
+    color: #aaa;
+    &:hover {
+        color: $gray-dark;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
 .page-home .navbar-container {
   position: absolute;
   z-index: 1000;
