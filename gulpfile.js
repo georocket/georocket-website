@@ -10,8 +10,8 @@ var prettyHrtime = require("pretty-hrtime");
 var serveStatic = require("serve-static");
 
 var Metalsmith = require("metalsmith");
-var applySlugToPosts = require("./applySlugToPosts");
-var assetFile = require("./assetFile");
+var applySlugToPosts = require("./plugins/applySlugToPosts");
+var assetFile = require("./plugins/assetFile");
 var assets = require("metalsmith-assets");
 var branch = require("metalsmith-branch");
 var collections = require("metalsmith-collections");
@@ -20,13 +20,13 @@ var define = require("metalsmith-define");
 var excerpts = require("metalsmith-excerpts");
 var markdown = require("metalsmith-markdown-remarkable");
 var paginate = require("metalsmith-paginate");
-var rename = require("./rename");
+var rename = require("./plugins/rename");
 var sass = require("metalsmith-sass");
-var setSitemapDate = require("./setSitemapDate");
-var setUrl = require("./setUrl");
+var setSitemapDate = require("./plugins/setSitemapDate");
+var setUrl = require("./plugins/setUrl");
 var sitemap = require("metalsmith-sitemap");
-var slugFromFilename = require("./slugFromFilename");
-var templates = require("./templates");
+var slugFromFilename = require("./plugins/slugFromFilename");
+var templates = require("./plugins/templates");
 
 var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
 
