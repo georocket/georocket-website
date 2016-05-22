@@ -13,6 +13,7 @@ var Metalsmith = require("metalsmith");
 var applySlugToPosts = require("./applySlugToPosts");
 var assetFile = require("./assetFile");
 var assets = require("metalsmith-assets");
+var branch = require("metalsmith-branch");
 var collections = require("metalsmith-collections");
 var dateInFilename = require("metalsmith-date-in-filename");
 var define = require("metalsmith-define");
@@ -21,7 +22,9 @@ var markdown = require("metalsmith-markdown-remarkable");
 var paginate = require("metalsmith-paginate");
 var rename = require("./rename");
 var sass = require("metalsmith-sass");
+var setSitemapDate = require("./setSitemapDate");
 var setUrl = require("./setUrl");
+var sitemap = require("metalsmith-sitemap");
 var slugFromFilename = require("./slugFromFilename");
 var templates = require("./templates");
 
@@ -130,10 +133,23 @@ function build(done, dev) {
 
     // convert scss to css
     .use(sass({
-        includePaths: [
-            path.join(bowerrc.directory, "bootstrap/scss")
-        ]
+      includePaths: [
+        path.join(bowerrc.directory, "bootstrap/scss")
+      ]
     }))
+
+    // generate sitemap
+    .use(branch("**/index.html")
+      .use(setSitemapDate())
+      .use(sitemap({
+        urlProperty: "url",
+        hostname: siteUrl,
+        modifiedProperty: "sitemapDate",
+        defaults: {
+          changefreq: "weekly"
+        }
+      }))
+    )
 
     // build site
     .build(done);
