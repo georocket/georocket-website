@@ -88,6 +88,13 @@ function build(done, dev) {
     // set 'url' property needed in templates
     .use(setUrl())
 
+    // apply template engine to special files (apply in place)
+    .use(templates({
+      pattern: "robots.txt",
+      inPlace: true,
+      dev: dev
+    }))
+
     // apply template engine to markdown files only (apply in-place)
     .use(templates({
       pattern: "**/*.md",
