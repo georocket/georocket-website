@@ -26,9 +26,4 @@ $btn-primary-bg:                 #486583;
 
 // Navbar
 
-$navbar-padding-horizontal:         0;
-
-// FIXME maybe a !default is missing in _variables.scss in the bootstrap 4 alpha package
-// FIXME for the moment we're going to overwrite directly
-$navbar-light-color:                rgba(0,0,0,.6);
-$navbar-light-hover-color:          rgba(0,0,0,.8);
+$navbar-padding-x:                  0;

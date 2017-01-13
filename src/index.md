@@ -24,7 +24,7 @@ template: page.html
 
 <div class="container">
 <div class="row">
-<div class="col-xs-12">
+<div class="col-12">
 
 <div class="row featurette">
 <div class="col-md-7">
@@ -44,7 +44,7 @@ template: page.html
 <hr class="featurette-divider">
 
 <div class="row featurette">
-<div class="col-md-7 col-md-push-5">
+<div class="col-md-7 push-md-5">
   <h2 class="featurette-heading"><span class="plus">+</span> Spatial queries</h2>
   <p>Powered by popular Open-Source framework <a href="https://www.elastic.co">Elasticsearch</a>,
   GeoRocket offers a wide range of <em>high-speed search features</em>. You can perform spatial queries and search for
@@ -52,7 +52,7 @@ template: page.html
   <p>GeoRocket will select only those features in the data store that match your request. They
   will be merged in their original form to a valid geospatial file.</p>
 </div>
-<div class="col-md-5 col-md-pull-7">
+<div class="col-md-5 pull-md-7">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/spatial-queries.svg" alt="Spatial queries">
 </div>
 </div>
@@ -76,7 +76,7 @@ template: page.html
 <hr class="featurette-divider">
 
 <div class="row featurette">
-<div class="col-md-7 col-md-push-5">
+<div class="col-md-7 push-md-5">
   <h2 class="featurette-heading"><span class="plus">+</span> Enterprise and Open-Source</span></h2>
   <p>GeoRocket exists in two variants. <em>GeoRocket Pro</em> is a professional data store
   that meets enterprise requirements such as multi-tenancy, versioning or extended
@@ -86,7 +86,7 @@ template: page.html
   <p><em>GeoRocket OSS</em> is hosted on <a href="https://github.com/georocket/georocket">GitHub</a>
   and licensed under the Apache License, Version 2. Contributions are welcome!</p>
 </div>
-<div class="col-md-5 col-md-pull-7">
+<div class="col-md-5 pull-md-7">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
 </div>
 </div>

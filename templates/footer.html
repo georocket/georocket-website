@@ -1,8 +1,11 @@
 <footer>
   <div class="container">
-    <nav class="navbar">
+    <nav class="navbar navbar-toggleable" id="footer-navbar">
       <a class="navbar-brand hidden-xs-down" href="{{ site.url }}/">GeoRocket</a>
-      <ul class="nav navbar-nav pull-sm-right">
+      <ul class="navbar-nav mx-auto mr-sm-0 ml-sm-auto text-center text-md-left">
+        <li class="nav-item hidden-sm-up">
+            <a class="nav-link pseudo-brand" href="{{ site.url }}/">GeoRocket</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Downloads</span></a>
         </li>
@@ -22,12 +25,12 @@
 <footer class="copyright">
   <div class="container">
     <div class="row copyright">
-      <div class="col-md-4">
+      <div class="col-md-4 text-center text-md-left">
         <a href="http://www.igd.fraunhofer.de">
           <img class="img-fluid fraunhofer-logo" src="{{ site.url }}/images/fraunhofer.svg" alt="Fraunhofer logo">
         </a>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8 text-center text-md-left">
         <p class="text-md-right">Copyright &copy; 2015-{{ site.time | date("YYYY") }} <a href="http://www.igd.fraunhofer.de">Fraunhofer Institute for Computer Graphics Research IGD</a> |
         <a href="{{ site.url }}/imprint">Imprint</a></p>
       </div>

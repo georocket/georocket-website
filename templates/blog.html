@@ -17,12 +17,14 @@
     </div>
     <div class="row blog-post-row">
     {%- endif %}
-    <div class="col-md-4 blog-post-block">
-      <div class="card card-block">
+    <div class="col-md-4 blog-post-block mb-3">
+      <div class="card">
+      <div class="card-block">
       <h3 class="card-title"><a href="{{ site.url }}/blog/{{ post.slug }}">{{ post.title }}</a></h3>
       <p class="date">{{ post.date | date('MMMM, Do YYYY') }}</p>
       <span class="ellipsis">{{ post.excerpt | safe }}</span>
       <p class="keep-reading">&raquo; <a href="{{ site.url }}/blog/{{ post.slug }}">Keep reading</a></p>
+      </div>
       </div>
     </div>
     {%- endif %}
@@ -30,9 +32,9 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12 pagination-column">
+    <div class="col-12">
       <nav>
-        <ul class="pagination">
+        <ul class="pagination justify-content-center">
           <li class="page-item{% if not pagination.prev %} disabled{% endif %}">
             <a class="page-link" href="{% if pagination.prev %}{{ site.url }}{{ pagination.prev.url }}{% else %}#{% endif %}" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>

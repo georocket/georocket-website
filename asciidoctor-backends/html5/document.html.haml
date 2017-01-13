@@ -8,13 +8,13 @@
   ---
 .container.container-main
   .row
-    .col-md-3.col-md-push-9
+    .col-md-3.push-md-9
       - if (attr? :toc) && (attr? 'toc-placement', 'auto')
         #toccontainer
           #toc.fixedsticky{:class=>(attr 'toc-class', 'toc')}
             %h3#toctitle=attr 'toc-title'
             =converter.convert self, 'outline'
-    .col-md-9.col-md-pull-3
+    .col-md-9.pull-md-3
       %h1=@header.title
       %p.lead
         - if attr? :revnumber

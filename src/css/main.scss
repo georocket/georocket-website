@@ -10,6 +10,12 @@ body:not(.page-home) {
   }
 }
 
+// fix issue in boostrap 4.0.0-alpha.6
+// buttons do not inherit font-family from body
+button, input, optgroup, select, textarea {
+  font: inherit;
+}
+
 .container-main {
   min-height: calc(100vh - 12rem /* footer 1 */ - 14rem /* footer 2 */ - 8rem /* header */ - 1rem /* buffer */);
 }
@@ -72,6 +78,10 @@ body:not(.page-home) {
       display: none;
     }
 
+    .nav-link {
+      padding: 0;
+    }
+
     .nav-link.active+ul {
       display: block;
     }
@@ -90,6 +100,12 @@ body:not(.page-home) {
 .navbar-container {
   background-color: $brand-dark-blue;
   margin-bottom: 3 * $spacer;
+}
+
+#footer-navbar {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 #goto-top-button {
@@ -147,7 +163,6 @@ body:not(.page-home) {
     li {
       position: relative;
       top: 50%;
-      transform: translateY(-50%);
 
       .nav-link {
         color: #ccc;
@@ -205,7 +220,7 @@ body:not(.page-home) {
   }
 
   // set max-height for jquery.dotdotdot.js
-  $elh: floor($lead-font-size * $line-height);
+  $elh: floor($lead-font-size * $line-height-base);
   .ellipsis {
     display: block;
     max-height: $elh * 5;
@@ -215,10 +230,6 @@ body:not(.page-home) {
   .date {
     color: #999;
   }
-}
-
-.pagination-column {
-    text-align: center;
 }
 
 .pagination a:hover, .pagination a:focus {
@@ -409,7 +420,7 @@ footer {
   background-color: $brand-dark-blue;
   font-size: 1.1rem;
 
-  .navbar-brand {
+  .navbar-brand, .pseudo-brand {
     text-transform: uppercase;
     color: $gray-lighter;
   }

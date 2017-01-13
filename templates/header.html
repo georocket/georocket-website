@@ -40,25 +40,27 @@
 
 <div class="navbar-container{%if hastitlelarge %} has-title-large{% endif %}">
 <div class="container">
-  <nav class="navbar navbar-light navbar-static-top">
-    <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#main-navbar">
+  <nav class="navbar navbar-toggleable-md navbar-light navbar-static-top" id="main-navbar">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar-collapse">
       &#9776;
     </button>
     <a class="navbar-brand" href="{{ site.url }}/"><img src="{{ site.url }}/images/logo_light.svg" height="60px"></a>
-    <ul class="nav navbar-nav pull-xs-right hidden-sm-down">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Downloads</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Showcases</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.url }}/docs">Docs</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.url }}/blog">Blog</span></a>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="main-navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Downloads</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Showcases</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.url }}/docs">Docs</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.url }}/blog">Blog</span></a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </div>
 </div>

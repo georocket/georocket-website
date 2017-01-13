@@ -1,7 +1,7 @@
 - unless sections.empty?
   - toclevels ||= (document.attr 'toclevels', 2).to_i
   - slevel = section_level sections.first
-  %ul.nav{:class=>"sectlevel#{slevel}"}
+  %ul.nav.flex-column{:class=>"sectlevel#{slevel}"}
     - sections.each do |sec|
       %li.nav-item
         %a.nav-link{:href=>"##{sec.id}"}= section_title sec
