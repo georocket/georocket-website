@@ -1,4 +1,3 @@
-var bower = require("gulp-bower");
 var connect = require("connect");
 var compress = require("compression");
 var del = require("del");
@@ -28,7 +27,7 @@ var sitemap = require("metalsmith-sitemap");
 var slugFromFilename = require("./plugins/slugFromFilename");
 var templates = require("./plugins/templates");
 
-var bowerrc = JSON.parse(fs.readFileSync("./.bowerrc"));
+var node_modules = "node_modules";
 
 var paths = {
   site: "site",
@@ -121,15 +120,13 @@ function build(done, dev) {
     }))
 
     // copy required javascripts
-    .use(assetFile(path.join(bowerrc.directory, "filament-fixed/fixedfixed.js"),
-        "js/fixedfixed.js"))
-    .use(assetFile(path.join(bowerrc.directory, "filament-sticky/fixedsticky.js"),
+    .use(assetFile(path.join(node_modules, "fixed-sticky/fixedsticky.js"),
         "js/fixedsticky.js"))
-    .use(assetFile(path.join(bowerrc.directory, "filament-sticky/fixedsticky.css"),
+    .use(assetFile(path.join(node_modules, "fixed-sticky/fixedsticky.css"),
         "js/fixedsticky.css"))
-    .use(assetFile(path.join(bowerrc.directory, "scrollme/jquery.scrollme.min.js"),
+    .use(assetFile(path.join(node_modules, "scrollme/jquery.scrollme.min.js"),
         "js/jquery.scrollme.min.js"))
-    .use(assetFile(path.join(bowerrc.directory, "jQuery.dotdotdot/src/jquery.dotdotdot.min.js"),
+    .use(assetFile(path.join(node_modules, "jquery-dotdotdot/src/jquery.dotdotdot.min.js"),
         "js/jquery.dotdotdot.min.js"))
 
     // copy javadocs
@@ -141,7 +138,7 @@ function build(done, dev) {
     // convert scss to css
     .use(sass({
       includePaths: [
-        path.join(bowerrc.directory, "bootstrap/scss")
+        path.join(node_modules, "bootstrap/scss")
       ]
     }))
 
@@ -162,15 +159,11 @@ function build(done, dev) {
     .build(done);
 }
 
-gulp.task("bower", function() {
-  return bower();
-});
-
-gulp.task("build", ["bower"], function(done) {
+gulp.task("build", function(done) {
   build(done);
 });
 
-gulp.task("buildDev", ["bower"], function(done) {
+gulp.task("buildDev", function(done) {
   build(done, true);
 });
 
@@ -199,7 +192,7 @@ gulp.task("watch", ["buildDev"], function() {
 });
 
 gulp.task("clean", function(cb) {
-  del([bowerrc.directory, paths.site], cb);
+  del([paths.site], cb);
 });
 
 gulp.task("default", ["build"]);

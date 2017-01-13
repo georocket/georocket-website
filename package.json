@@ -10,14 +10,14 @@
   },
   "devDependencies": {
     "async": "^1.5.2",
-    "bower": "^1.6.5",
     "compression": "^1.6.0",
     "connect": "^3.4.0",
     "del": "^2.0.2",
     "extend": "^3.0.0",
+    "fixed-sticky": "0.1.7",
     "gulp": "^3.9.0",
-    "gulp-bower": "0.0.13",
     "gulp-util": "^3.0.7",
+    "jquery-dotdotdot": "^1.8.2",
     "lodash": "^4.12.0",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
@@ -37,6 +37,10 @@
     "nunjucks": "^2.1.0",
     "nunjucks-date": "^1.1.2",
     "pretty-hrtime": "^1.0.1",
+    "scrollme": "https://github.com/Firefund/scrollme.git",
     "serve-static": "^1.10.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.2"
   }
 }
