@@ -149,7 +149,9 @@ function build(done, dev) {
     .use(sass({
       includePaths: [
         path.join(node_modules, "bootstrap/scss")
-      ]
+      ],
+      sourceMap: dev,
+      sourceMapContents: dev
     }))
 
     // generate sitemap
