@@ -26,6 +26,7 @@ var setUrl = require("./plugins/setUrl");
 var sitemap = require("metalsmith-sitemap");
 var slugFromFilename = require("./plugins/slugFromFilename");
 var templates = require("./plugins/templates");
+var uglify = require("metalsmith-uglify");
 
 var node_modules = "node_modules";
 
@@ -124,6 +125,15 @@ function build(done, dev) {
         "js/fixedsticky.js"))
     .use(assetFile(path.join(node_modules, "fixed-sticky/fixedsticky.css"),
         "js/fixedsticky.css"))
+
+    // minify javascripts
+    .use(uglify({
+      preserveComments: "some",
+      removeOriginal: true,
+      sourceMap: dev
+    }))
+
+    // copy required javascripts (already minified)
     .use(assetFile(path.join(node_modules, "scrollme/jquery.scrollme.min.js"),
         "js/jquery.scrollme.min.js"))
     .use(assetFile(path.join(node_modules, "jquery-dotdotdot/src/jquery.dotdotdot.min.js"),
