@@ -39,7 +39,7 @@ application.</p>
   <div class="col-md-6">
     <div class="card">
       <div class="card-block">
-        <h3 class="card-title" id="server-api">Server API</h4>
+        <h3 class="card-title" id="server-api">Server API</h3>
         <p class="card-text">The server API is a collection of interfaces you
         can implement to add new functionality to GeoRocket or change its
         behaviour.</p>
