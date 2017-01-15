@@ -27,6 +27,7 @@
     "metalsmith-date-in-filename": "0.0.14",
     "metalsmith-define": "^2.0.1",
     "metalsmith-excerpts": "^1.1.0",
+    "metalsmith-html-minifier": "^2.2.0",
     "metalsmith-markdown-remarkable": "^0.1.1",
     "metalsmith-metallic": "^0.3.1",
     "metalsmith-paginate": "^0.3.0",

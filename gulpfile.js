@@ -17,6 +17,7 @@ var collections = require("metalsmith-collections");
 var dateInFilename = require("metalsmith-date-in-filename");
 var define = require("metalsmith-define");
 var excerpts = require("metalsmith-excerpts");
+var htmlMinifier = require("metalsmith-html-minifier");
 var markdown = require("metalsmith-markdown-remarkable");
 var paginate = require("metalsmith-paginate");
 var rename = require("./plugins/rename");
@@ -166,6 +167,9 @@ function build(done, dev) {
         }
       }))
     )
+
+    // minify HTML
+    .use(htmlMinifier())
 
     // build site
     .build(done);
