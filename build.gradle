@@ -1,7 +1,7 @@
 plugins {
     id 'org.asciidoctor.convert' version '1.5.3'
-    id "com.moowork.gulp" version "0.12"
-    id "com.moowork.node" version "0.12"
+    id "com.moowork.gulp" version "1.1.1"
+    id "com.moowork.node" version "1.1.1"
 }
 
 apply plugin: 'org.asciidoctor.convert'
@@ -90,7 +90,7 @@ asciidoctor {
 
 asciidoctor.dependsOn(extractDocs)
 
-gulp_build.dependsOn copyDocs, prepareUserDocs, npmInstall
+gulp_build.dependsOn copyDocs, prepareUserDocs, yarn_install
 
 assemble.dependsOn gulp_build
 
