@@ -22,6 +22,13 @@ to fetch the lastest documentation snapshots.
 You may also run `gulp watch` to run a web server on <http://localhost:4000> and
 to watch for changes on the source files in the background.
 
+Build Docker image
+------------------
+
+*Follow the build instructions above first.* Then run the following command:
+
+    docker build -t georocket-website .
+
 License
 -------
 
