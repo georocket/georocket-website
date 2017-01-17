@@ -13,10 +13,12 @@ var applySlugToPosts = require("./plugins/applySlugToPosts");
 var assetFile = require("./plugins/assetFile");
 var assets = require("metalsmith-assets");
 var branch = require("metalsmith-branch");
+var brotli = require("metalsmith-brotli");
 var collections = require("metalsmith-collections");
 var dateInFilename = require("metalsmith-date-in-filename");
 var define = require("metalsmith-define");
 var excerpts = require("metalsmith-excerpts");
+var gzip = require("metalsmith-gzip");
 var htmlMinifier = require("metalsmith-html-minifier");
 var markdown = require("metalsmith-markdown-remarkable");
 var paginate = require("metalsmith-paginate");
@@ -170,6 +172,10 @@ function build(done, dev) {
 
     // minify HTML
     .use(htmlMinifier())
+
+    // generate compressed files
+    .use(gzip())
+    .use(brotli())
 
     // build site
     .build(done);
