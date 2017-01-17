@@ -1,13 +1,12 @@
 language: java
-sudo: false
+
+sudo: required
+
 jdk:
   - oraclejdk8
-cache:
-  directories:
-  - $HOME/.cache/bower
-  - $HOME/.gradle
-  - $HOME/.npm
-  - .gradle
+
+services:
+  - docker
 
 # some npm modules need a newer g++ compiler
 addons:
@@ -19,3 +18,18 @@ addons:
     - g++-6
 env:
   - CXX=g++-6
+
+cache:
+  directories:
+  - $HOME/.cache/bower
+  - $HOME/.gradle
+  - $HOME/.npm
+  - .gradle
+
+script:
+  - ./gradlew assemble check &&
+    docker build -t georocket/georocket-website . &&
+    if [ "$TRAVIS_REPO_SLUG" == "georocket/georocket-website" ] && ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" &&
+    docker push georocket/georocket-website;
+    fi
