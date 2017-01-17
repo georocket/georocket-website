@@ -42,7 +42,7 @@ var paths = {
 };
 
 function build(done, dev) {
-  var canonicalUrl = "http://georocket.io";
+  var canonicalUrl = "https://georocket.io";
   var siteUrl = canonicalUrl;
   if (dev) {
     siteUrl = "http://localhost:4000";
