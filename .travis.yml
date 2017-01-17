@@ -8,3 +8,14 @@ cache:
   - $HOME/.gradle
   - $HOME/.npm
   - .gradle
+
+# some npm modules need a newer g++ compiler
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-6
+    - g++-6
+env:
+  - CXX=g++-6
