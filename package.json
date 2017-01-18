@@ -18,7 +18,7 @@
     "fixed-sticky": "0.1.7",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.7",
-    "jquery-dotdotdot": "^1.8.2",
+    "jquery.dotdotdot": "https://github.com/FrDH/jQuery.dotdotdot.git",
     "lodash": "^4.12.0",
     "md5": "^2.2.1",
     "metalsmith": "^2.1.0",
@@ -44,7 +44,8 @@
     "nunjucks-date": "^1.1.2",
     "pretty-hrtime": "^1.0.1",
     "scrollme": "https://github.com/Firefund/scrollme.git",
-    "serve-static": "^1.10.0"
+    "serve-static": "^1.10.0",
+    "tether": "^1.4.0"
   },
   "dependencies": {}
 }

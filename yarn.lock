@@ -1541,13 +1541,11 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-dotdotdot@^1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/jquery-dotdotdot/-/jquery-dotdotdot-1.8.2.tgz#a25d9dca06faefb267b55fdd0741f2d4f21a0fd7"
-  dependencies:
-    jquery ">= 1.4.3"
+"jquery.dotdotdot@https://github.com/FrDH/jQuery.dotdotdot.git":
+  version "1.8.3"
+  resolved "https://github.com/FrDH/jQuery.dotdotdot.git#779ab93d259c3a67c45b2f80124aa8391ef49165"
 
-"jquery@>= 1.4.3", jquery@>=1.8, jquery@>=1.9.1:
+jquery@>=1.8, jquery@>=1.9.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 

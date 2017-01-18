@@ -147,10 +147,16 @@ function build(done, dev) {
     }))
 
     // copy required javascripts (already minified)
+    .use(assetFile(path.join(node_modules, "bootstrap/dist/js/bootstrap.min.js"),
+        "js/bootstrap.min.js"))
+    .use(assetFile(path.join(node_modules, "jquery/dist/jquery.min.js"),
+        "js/jquery.min.js"))
+    .use(assetFile(path.join(node_modules, "jquery.dotdotdot/src/jquery.dotdotdot.min.js"),
+        "js/jquery.dotdotdot.min.js"))
     .use(assetFile(path.join(node_modules, "scrollme/jquery.scrollme.min.js"),
         "js/jquery.scrollme.min.js"))
-    .use(assetFile(path.join(node_modules, "jquery-dotdotdot/src/jquery.dotdotdot.min.js"),
-        "js/jquery.dotdotdot.min.js"))
+    .use(assetFile(path.join(node_modules, "tether/dist/js/tether.min.js"),
+        "js/tether.min.js"))
 
     // copy javadocs
     .use(assets({
