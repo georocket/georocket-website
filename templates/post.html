@@ -1,0 +1,43 @@
+{% include "header.html" %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>{{ title }}</h1>
+      <p class="lead">{{ lead }}</p>
+      {{ contents | safe }}
+    </div>
+    <div class="col-sm-4">
+      <div class="d-flex flex-row align-items-center blog-post-author">
+        <div class="pr-2 pt-2"><a href="{{ site.authors[author].github }}"><img src="{{ site.authors[author].gravatar }}?s=160" height="80px" class="rounded-circle"></a></div>
+        <div class="pl-2 pt-2 pb-2 text-muted">by <a href="{{ site.authors[author].github }}">{{ site.authors[author].name }}</a><br>
+        <em class="text-uppercase"><small>{{ date | date('D MMMM YYYY') }}</em></small></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <div id="comments">
+    <div id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+        this.page.url = '{{ site.canonicalurl }}/blog{{ url }}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{ id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//georocket.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}

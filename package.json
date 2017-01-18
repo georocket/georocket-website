@@ -20,6 +20,7 @@
     "gulp-util": "^3.0.7",
     "jquery-dotdotdot": "^1.8.2",
     "lodash": "^4.12.0",
+    "md5": "^2.2.1",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-branch": "0.0.4",

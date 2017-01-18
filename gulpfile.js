@@ -4,6 +4,7 @@ var del = require("del");
 var fs = require("fs");
 var gulp = require("gulp");
 var gutil = require("gulp-util");
+var md5 = require("md5");
 var path = require("path");
 var prettyHrtime = require("pretty-hrtime");
 var serveStatic = require("serve-static");
@@ -25,11 +26,13 @@ var paginate = require("metalsmith-paginate");
 var rename = require("./plugins/rename");
 var sass = require("metalsmith-sass");
 var setSitemapDate = require("./plugins/setSitemapDate");
-var setUrl = require("./plugins/setUrl");
+var setUrlAndId = require("./plugins/setUrlAndId");
 var sitemap = require("metalsmith-sitemap");
 var slugFromFilename = require("./plugins/slugFromFilename");
 var templates = require("./plugins/templates");
 var uglify = require("metalsmith-uglify");
+
+var authors = require("./authors.json");
 
 var node_modules = "node_modules";
 
@@ -48,6 +51,12 @@ function build(done, dev) {
     siteUrl = "http://localhost:4000";
   }
 
+  // calculate gravatar URLs for all authors
+  Object.keys(authors).forEach(author => {
+    var a = authors[author];
+    a.gravatar = "https://www.gravatar.com/avatar/" + md5(a.email);
+  });
+
   Metalsmith(__dirname)
     // configure Metalsmith
     .source(paths.src)
@@ -58,7 +67,8 @@ function build(done, dev) {
       site: {
         url: siteUrl,
         canonicalurl: canonicalUrl,
-        time: Date.now()
+        time: Date.now(),
+        authors: authors
       }
     }))
 
@@ -89,7 +99,7 @@ function build(done, dev) {
     .use(slugFromFilename())
 
     // set 'url' property needed in templates
-    .use(setUrl())
+    .use(setUrlAndId())
 
     // apply template engine to special files (apply in place)
     .use(templates({
