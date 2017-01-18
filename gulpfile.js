@@ -171,7 +171,9 @@ function build(done, dev) {
     )
 
     // minify HTML
-    .use(htmlMinifier())
+    .use(htmlMinifier({
+      minifyJS: true
+    }))
 
     // generate compressed files
     .use(gzip())
