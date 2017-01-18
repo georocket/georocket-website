@@ -45,7 +45,7 @@ var paths = {
 };
 
 function build(done, dev) {
-  var canonicalUrl = "https://georocket.io";
+  var canonicalUrl = "https://georocket.igd.fraunhofer.de";
   var siteUrl = canonicalUrl;
   if (dev) {
     siteUrl = "http://localhost:4000";
