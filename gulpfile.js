@@ -177,7 +177,11 @@ function build(done, dev) {
 
     // generate compressed files
     .use(gzip())
-    .use(brotli())
+    .use(brotli({
+      brotli: {
+        mode: 1
+      }
+    }))
 
     // build site
     .build(done);
