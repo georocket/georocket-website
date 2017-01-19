@@ -329,15 +329,27 @@ button, input, optgroup, select, textarea {
   }
 }
 
-button.download {
+button.try {
   font-size: 20px;
   padding: 10px 20px;
   background-color: transparent;
   color: #fff;
+  cursor: pointer;
 
   &:hover {
     background-color: #fff;
     color: $brand-dark-blue;
+  }
+}
+
+.nav-link.try {
+  border: $input-btn-border-width solid #ccc;
+  @extend .rounded;
+  padding: .4rem 1.1rem;
+  color: #ccc;
+  &:hover, &:focus {
+    color: #fff;
+    border-color: #fff;
   }
 }
 
@@ -368,7 +380,7 @@ button.download {
   margin: $spacer * 3 0;
 }
 
-.home-download-container {
+.home-try-container {
   background-color: $brand-dark-blue;
   width: 100%;
   color: #fff;
@@ -388,6 +400,16 @@ button.download {
       float: none;
       margin-top: $spacer;
     }
+  }
+}
+
+.page-try .try-cards .card {
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+
+  img {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
   }
 }
 
