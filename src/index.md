@@ -78,7 +78,7 @@ template: page.html
 <div class="row featurette">
 <div class="col-md-7 push-md-5">
   <h2 class="featurette-heading"><span class="plus">+</span> Enterprise and Open-Source</span></h2>
-  <p>GeoRocket exists in two variants. <em>GeoRocket Pro</em> is a professional data store
+  <p>GeoRocket exists in two editions. <em>GeoRocket Pro</em> is a professional data store
   that meets enterprise requirements such as multi-tenancy, versioning or extended
   search features. Compared to this, the <em>Open-Source</em> version of GeoRocket offers
   limited functionality but is still powerful enough for most applications.</p>
@@ -121,13 +121,12 @@ template: page.html
     </div>
     <div class="col-md-6">
       <h2>Who we are</h2>
-      <p>GeoRocket is developed by a <a href="https://github.com/georocket/georocket">vivid community</a>
-      led by researchers at the competence center for Spatial Information Management of the
+      <p>GeoRocket's development is led by the competence center for
+      <a href="http://www.igd.fraunhofer.de/en/competences/technologien/spatial-information-management">Spatial Information Management</a> of the
       <a href="http://www.igd.fraunhofer.de/">Fraunhofer Institute for Computer
       Graphics Research IGD</a> in Darmstadt, Germany.</p>
       <p><em>Fraunhofer IGD</em> is the international leading research institution for
-      applied visual computing&mdash;image and model-based information technology
-      that combines computer graphics and computer vision. The competence center
+      applied visual computing. The competence center
       for <em>Spatial Information Management</em> offers expertise and innovative
       technologies that enable successful communication and efficient
       cooperation with the help of geographic information.</p>
