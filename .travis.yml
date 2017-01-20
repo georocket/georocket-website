@@ -33,3 +33,9 @@ script:
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" &&
     docker push georocket/georocket-website;
     fi
+
+notifications:
+  slack:
+    on_pull_requests: false
+    secure: uL6Xb3OWVa9u0+uYXZAhqCJ9oZKRlHERxkOZ3l6yIvZeEDDshONrvqqysm+GiNumfTtBz+2wgxE7Yojv5Gnkg3tgpCvEd1BuJKquilhRzCrWEG5o2Qkeqi1Z+NNv6BQy3/5qrhzkWe54eqn/Ti2gaZMKybqEwAt47m5eb+OT8jwCTDnRNcE/MNZYl1LugjrfwFBh2GY6I/YyXIkpGLWyYaZnozalYJlA17RX6tYxOqYT/F5bvxQ678qn/PBYgzZQxmCGxmu3Zcvazks3gegC/K6LfInAwMluAJpytlLryX+jpeeFPo8zVIkrDri4vNqPMXKUv0WF3Jn8rMyXUXKJPagY2KXo45M/+MWl+YQXeBeOFwgWyu3+pYwLfpb+lnDWpi9zNnVeMv+PSbEu3XvjFei8D2fDHFw1jRlWj2CUKsZLMqY5BF69Z/DlTKywcp+X7Txjt72KDFDhzBb+qLiTePVvFzSGiuuZltIB4nxygxQDqR6LHoIjxJMlfzKYXkVX7jtH3qEi1mf9Jmo8F9xG6KMCv6Cm4IgjL1vTvndYvvg5i1zfvWsTERYK54h+AxNZinrIp4C+Uf2ZGRYX4vUE5tfK6OUdCuBlaQ646fdb2NhZGm4bwZF8SMwxdwD5HFWmy50z1JSnVLNMe03Z9oOw60hU6R0nwKYd2koavRCQmSo=
+    on_success: always
