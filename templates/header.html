@@ -44,7 +44,10 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar-collapse">
       &#9776;
     </button>
-    <a class="navbar-brand" href="{{ site.url }}/"><img src="{{ site.url }}/images/logo_light.svg" height="60px"></a>
+    <a class="navbar-brand" href="{{ site.url }}/">
+      <img src="{{ site.url }}/images/logo_light.svg" height="60px" class="hidden-sm-down">
+      <img src="{{ site.url }}/images/logo_light.svg" height="50px" class="hidden-md-up">
+    </a>
     <div class="collapse navbar-collapse" id="main-navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

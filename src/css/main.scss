@@ -132,38 +132,26 @@ button, input, optgroup, select, textarea {
 }
 
 .page-home .navbar-container {
-  position: absolute;
-  z-index: 1000;
   width: 100%;
-  top: $spacer * 2;
-  background-color: transparent;
+  padding-top: $spacer * 2;
+  background-color: $brand-dark-blue;
   margin-bottom: 0;
 }
 
 .navbar-light {
-  height: 82px;
-  position: relative;
-
   .navbar-toggler {
-    color: #fff;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    color: #ccc;
+    &:hover, &:active, &:focus {
+      color: #fff;
+    }
+
+    cursor: pointer;
+    top: $spacer;
     font-size: 2rem;
   }
 
   .navbar-nav {
-    height: 100%;
-    position: relative;
-
-    // do not blur vertically centered text when it's placed on a half-pixel
-    transform-style: preserve-3d;
-
-    // center li in navbar vertically
     li {
-      position: relative;
-      top: 50%;
-
       .nav-link {
         color: #ccc;
 
@@ -247,8 +235,10 @@ button, input, optgroup, select, textarea {
   overflow: hidden;
   margin-bottom: 100px;
   position: relative;
+  top: calc(-84px - #{$spacer} * 2); // navbar height plus navbar padding-top
   background-color: $brand-dark-blue;
   color: #fff;
+  z-index: -1; // put behind navbar
 
   .whiteclouds {
     position: absolute;
