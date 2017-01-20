@@ -259,14 +259,6 @@ button, input, optgroup, select, textarea {
   .rocket {
     height: 55vh;
 
-    // move rocket to the left on small screens
-    @include media-breakpoint-down(lg) {
-      margin-left: -30%;
-    }
-     @include media-breakpoint-down(sm) {
-      margin-left: 0;
-    }
-
     // make rocket smaller on small screens
     @include media-breakpoint-down(lg) {
       height: 45vh;
