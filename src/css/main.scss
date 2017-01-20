@@ -233,7 +233,7 @@ button, input, optgroup, select, textarea {
   height: 100vh;
   max-width: 100%;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: -$spacer;
   position: relative;
   top: calc(-84px - #{$spacer} * 2); // navbar height plus navbar padding-top
   background-color: $brand-dark-blue;
@@ -259,7 +259,21 @@ button, input, optgroup, select, textarea {
   .rocket {
     height: 55vh;
 
+    // move rocket to the left on small screens
+    @include media-breakpoint-down(lg) {
+      margin-left: -30%;
+    }
+     @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+
     // make rocket smaller on small screens
+    @include media-breakpoint-down(lg) {
+      height: 45vh;
+    }
+    @include media-breakpoint-down(md) {
+      height: 40vh;
+    }
     @include media-breakpoint-down(sm) {
       height: 35vh;
     }
@@ -304,6 +318,7 @@ button, input, optgroup, select, textarea {
   // black background
   .outer-space {
     position: absolute;
+    left: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
