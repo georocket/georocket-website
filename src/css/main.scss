@@ -91,6 +91,26 @@ a.btn:focus {
       display: block;
     }
   }
+
+  #toccontainer {
+    // disable height property set by stickytoc.js
+    @include media-breakpoint-down(sm) {
+      height: auto !important;
+      padding-bottom: $spacer * 3;
+    }
+  }
+
+  // auto-add scrollbar if code blocks are too wide
+  .literalblock .content, .listingblock .content {
+    max-width: 100%;
+    overflow-x: scroll;
+
+    pre code {
+      width: auto;
+      display: inline-block;
+      min-width: 100%;
+    }
+  }
 }
 
 // FIXME remove this workaround as soon as we can overwrite bootstrap variable
