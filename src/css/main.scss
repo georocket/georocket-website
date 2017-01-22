@@ -109,6 +109,14 @@ a.btn:focus {
 
 #main-navbar {
   z-index: 10; // put in front of welcome banner
+
+  .navbar-brand img {
+    @include media-breakpoint-down(sm) {
+      height: auto;
+      max-height: 50px;
+      max-width: calc(100% - 55px - #{$spacer}); // navbar-toggler width + margin
+    }
+  }
 }
 
 #footer-navbar {

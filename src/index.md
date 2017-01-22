@@ -12,7 +12,7 @@ template: page.html
   <div class="row">
     <div class="col-md-8">
       <h1>It's not rocket science!</h1>
-      <h2>GeoRocket is a high-performance data store for geospatial files</h2>
+      <h2 class="hidden-xs-down">GeoRocket is a high-performance data store for geospatial files</h2>
       <a href="{{ site.url }}/try"><button type="button" class="btn btn-secondary hidden-sm-down try">Try GeoRocket v1.0.0-SNAPSHOT</button></a>
     </div>
     <div class="col-md-4">
@@ -117,7 +117,7 @@ template: page.html
       <h5>{{ post.date | date('MMMM, Do YYYY') }}</h5>
       <p><a href="{{ site.url }}/blog/{{ post.slug }}">{{ post.title }}</a></p>
       {%- endif %}{%- endfor %}
-      <a href="{{ site.url }}/blog" class="btn btn-secondary">View all</a>
+      <a href="{{ site.url }}/blog" class="btn btn-secondary mb-4">View all</a>
     </div>
     <div class="col-md-6">
       <h2>Who we are</h2>
