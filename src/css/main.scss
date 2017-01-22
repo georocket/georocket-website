@@ -16,6 +16,11 @@ button, input, optgroup, select, textarea {
   font: inherit;
 }
 
+// text color of focused button links should be white
+a.btn:focus {
+  color: #fff;
+}
+
 .container-main {
   min-height: calc(100vh - 12rem /* footer 1 */ - 14rem /* footer 2 */ - 8rem /* header */ - 1rem /* buffer */);
 }
