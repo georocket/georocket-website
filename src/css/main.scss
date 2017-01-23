@@ -103,7 +103,7 @@ a.btn:focus {
   // auto-add scrollbar if code blocks are too wide
   .literalblock .content, .listingblock .content {
     max-width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     pre code {
       width: auto;
