@@ -1,6 +1,7 @@
 ---
 id: try
 template: page.html
+title: Try GeoRocket
 hastitlelarge: true
 ---
 
