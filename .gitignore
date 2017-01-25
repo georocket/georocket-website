@@ -1,7 +1,9 @@
 .gradle/
+.settings/
 bower_components/
 build/
 node_modules/
 site/
 src/docs/user-documentation/
+.project
 *.sublime-workspace
