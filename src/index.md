@@ -29,8 +29,8 @@ template: page.html
 <div class="row featurette">
 <div class="col-md-7">
   <h2 class="featurette-heading"><span class="plus">+</span> Data storage</h2>
-  <p>GeoRocket can store geospatial files such as <em>3D city models</em> (CityGML),
-  <em>orthophotos</em> (GeoTIFF) or <em>GML files</em>. Any file saved in GeoRocket can be completely restored later.
+  <p>GeoRocket can store geospatial files such as <em>3D city models (CityGML)</em>,
+  <em>GML</em> and <em>GeoJSON</em> files. Any file saved in GeoRocket can be completely restored later.
   No information is lost.</p>
   <p>Multiple files can be combined to a complex scene. For example, upload a CityGML file containing your
   3D city model and another one containing your digital terrain model. GeoRocket will merge the files
