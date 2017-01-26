@@ -1,6 +1,6 @@
 {
   "name": "georocket-website",
-  "version": "1.0.0-SNAPSHOT",
+  "version": "1.0.0",
   "description": "GeoRocket Website",
   "license": "Apache-2.0",
   "private": true,
