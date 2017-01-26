@@ -123,6 +123,11 @@ set features = [
     "pro": true
   },
   {
+    "title": "Web visualization",
+    "description": "Data stored in GeoRocket can be visualized in 2D and 3D in a web browser",
+    "pro": true
+  },
+  {
     "title": "Cluster metrics",
     "description": "Detailed information about GeoRocket's status, work load and performance",
     "pro": true
