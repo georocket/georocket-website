@@ -13,6 +13,7 @@ ext {
     docs = new File(buildDir, "docs")
     src = new File("src")
     srcGen = new File(buildDir, "src-gen")
+    userDocsDest = new File(src, "docs/user-documentation")
 }
 
 repositories {
@@ -75,8 +76,12 @@ task copyDocs(dependsOn: [extractDocs, asciidoctor]) << {
 task prepareUserDocs(dependsOn: [copyDocs]) << {
     copy {
         from new File(srcGen, "georocket-docs-html")
-        into new File(src, "docs/user-documentation")
+        into userDocsDest
     }
+}
+
+task cleanUserDocs(type: Delete) {
+    delete userDocsDest
 }
 
 asciidoctor {
@@ -93,5 +98,6 @@ asciidoctor.dependsOn(extractDocs)
 gulp_build.dependsOn copyDocs, prepareUserDocs, yarn_install
 
 assemble.dependsOn gulp_build
+clean.dependsOn cleanUserDocs
 
 defaultTasks "build"
