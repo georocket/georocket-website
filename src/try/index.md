@@ -48,4 +48,9 @@ hastitlelarge: true
       </div>
     </div>
   </div>
+
+  <div class="text-center mt-3 mb-5 py-5 jumbotron">
+    <h2>Compare the GeoRocket editions</h2>
+    <a href="{{ site.url }}/products" class="btn btn-primary btn-icon-separate mt-4"><i class="mdi mdi-view-list" aria-hidden="true"></i> Complete list of features</a>
+  </div>
 </div>

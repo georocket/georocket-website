@@ -480,6 +480,13 @@ pre code {
   border-radius: $border-radius;
 }
 
+.bottom-banner {
+  background-color: $gray-lighter;
+  margin-top: 3 * $spacer;
+  padding-top: 3 * $spacer;
+  padding-bottom: 3 * $spacer;
+}
+
 footer {
   margin-top: 4 * $spacer;
   padding-top: 2 * $spacer;
@@ -527,11 +534,16 @@ footer {
       }
     }
   }
+
+  .bottom-banner + & {
+    margin-top: 0;
+  }
 }
 
 .compare-editions {
   width: 100%;
   margin-top: $spacer * 4;
+  margin-bottom: $spacer * 3;
 
   .compare-col-1 {
     flex-grow: 1;
@@ -617,5 +629,15 @@ footer {
 
   .mdi-close-circle-outline {
     color: $brand-orange;
+  }
+
+  .btn {
+    margin: $spacer 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    .btn {
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+    }
   }
 }
