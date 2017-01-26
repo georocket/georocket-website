@@ -33,14 +33,26 @@ set features = [
     "category": "General"
   },
   {
-    "title": "Import/Export",
-    "description": "Store geospatial files",
+    "title": "Import/export",
+    "description": "High-performance store for geospatial files",
     "oss": true,
     "pro": true
   },
   {
     "title": "Spatial queries",
     "description": "Search for attributes, layers, tags, and bounding boxes",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Schema agnostic",
+    "description": "Maintain multiple files with different schemas in the same store",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Format preserving",
+    "description": "Completely restore imported files when exporting and never lose information again",
     "oss": true,
     "pro": true
   },
@@ -57,6 +69,16 @@ set features = [
     "title": "GeoJSON",
     "description": "Feature collections and geometries",
     "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Binary files",
+    "description": "Store textures, orthophotos and other geospatial file formats",
+    "pro": true
+  },
+  {
+    "title": "Additional indexers",
+    "description": "Make use of more indexers for various file formats and schemas",
     "pro": true
   },
   {
@@ -87,18 +109,103 @@ set features = [
     "pro": true
   },
   {
+    "category": "Interfaces"
+  },
+  {
+    "title": "Command line",
+    "description": "Import, export, search and other features on the command line",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Admin web app",
+    "description": "Control GeoRocket with a web-based graphical user interface",
+    "pro": true
+  },
+  {
+    "title": "Cluster metrics",
+    "description": "Detailed information about GeoRocket's status, work load and performance",
+    "pro": true
+  },
+  {
+    "title": "HTTP interface",
+    "description": "Access GeoRocket from within your application via HTTP",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Client/server API",
+    "description": "Use our client and server API (Java) and develop apps and extensions",
+    "oss": true,
+    "pro": true
+  },
+  {
     "category": "Security"
   },
   {
     "title": "User authentication",
     "description": "Create users and groups, assign roles and permissions",
-    "oss": false,
+    "pro": true
+  },
+  {
+    "title": "Enterprise accounts",
+    "description": "Connect to a Single Sign-On (SSO) system or our enterprise directory (e.g. LDAP)",
     "pro": true
   },
   {
     "title": "Encryption",
     "description": "Secure your data in the Cloud against unauthorized access",
-    "oss": false,
+    "pro": true
+  },
+  {
+    "category": "Data management"
+  },
+  {
+    "title": "Data processing",
+    "description": "Connect GeoRocket with the GeoToolbox and apply various processing services",
+    "pro": true
+  },
+  {
+    "title": "Secondary data store",
+    "description": "Maintain derived or pre-processed data (e.g. different levels of detail, or glTF files)",
+    "pro": true
+  },
+  {
+    "title": "Versioning",
+    "description": "Store multiple versions of your data and access the history",
+    "pro": true
+  },
+  {
+    "category": "Deployment"
+  },
+  {
+    "title": "Cloud-ready",
+    "description": "GeoRocket is reactive, scalable and ready for the Cloud",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Serverless",
+    "description": "Run GeoRocket on a serverless infrastructure such as AWS Lambda",
+    "pro": true
+  },
+  {
+    "category": "Support"
+  },
+  {
+    "title": "Updates",
+    "description": "Get updates and bug fixed for your GeoRocket edition",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "Installation support",
+    "description": "Get help with installing and running GeoRocket",
+    "pro": true
+  },
+  {
+    "title": "Enterprise support",
+    "description": "8x5 support",
     "pro": true
   }
 ]

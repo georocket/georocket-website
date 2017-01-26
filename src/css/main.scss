@@ -632,12 +632,19 @@ footer {
   }
 
   .btn {
-    margin: $spacer 0;
+    margin: $spacer * 3 0 $spacer 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    .btn {
+      margin: $spacer * 2 0 $spacer 0;
+    }
   }
 
   @include media-breakpoint-down(xs) {
     .btn {
       @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+      margin: $spacer 0;
     }
   }
 }
