@@ -326,6 +326,21 @@ a.btn:focus {
     @include media-breakpoint-down(sm) {
       font-size: 40px;
     }
+    @media (max-height: 400px) {
+      font-size: 40px;
+    }
+
+    // change padding-top on smaller screens
+    @include media-breakpoint-down(lg) {
+      padding-top: 0.5em;
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 0.3em;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 0.7em;
+      padding-bottom: 0.7em;
+    }
   }
 
   h2 {
@@ -336,6 +351,11 @@ a.btn:focus {
     @include media-breakpoint-down(sm) {
       padding-bottom: $spacer;
       font-size: 30px;
+    }
+
+    // hide h2 if there is not enough space vertically
+    @media (max-height: 600px) {
+      display: none;
     }
   }
 
@@ -350,6 +370,10 @@ a.btn:focus {
     top: 47%;
     transform: translateY(-45%);
     z-index: 100;
+
+    @media (max-height: 500px) {
+      top: 55%;
+    }
   }
 
   // black background
