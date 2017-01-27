@@ -12,6 +12,12 @@ RUN sed -i -e "s/server_name\s*localhost;/server_name georocket.io;\n\
     if (\$scheme != 'https') {\n\
         rewrite ^ https:\/\/\$host\$uri permanent;\n\
     }/" /etc/nginx/conf.d/default.conf
+RUN sed -i -e "s/location\s*\/\s*{/\0\n\
+        expires 1d;\n\
+        location ~ \/(js|css|images)\/ {\n\
+            expires 7d;\n\
+        }\
+    /" /etc/nginx/conf.d/default.conf
 
 RUN apk add -U openssl && \
     mkdir -p /etc/nginx/ssl && \
