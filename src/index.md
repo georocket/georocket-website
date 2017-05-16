@@ -122,7 +122,7 @@ template: page.html
     <div class="col-md-6">
       <h2>Who we are</h2>
       <p>GeoRocket's development is led by the competence center for
-      <a href="http://www.igd.fraunhofer.de/en/competences/technologien/spatial-information-management">Spatial Information Management</a> of the
+      <a href="http://www.igd.fraunhofer.de/en/competences/technologies/spatial-information-management">Spatial Information Management</a> of the
       <a href="http://www.igd.fraunhofer.de/">Fraunhofer Institute for Computer
       Graphics Research IGD</a> in Darmstadt, Germany.</p>
       <p><em>Fraunhofer IGD</em> is the international leading research institution for
