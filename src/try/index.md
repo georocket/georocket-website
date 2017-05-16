@@ -44,7 +44,7 @@ hastitlelarge: true
         service interfaces.</p>
         <p class="card-text mx-lg-4 mb-4 pb-3">If you want to test GeoRocket Pro please contact
         us for further information.</p>
-        <a href="http://www.igd.fraunhofer.de/en/competences/technologien/spatial-information-management" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-contact-mail" aria-hidden="true"></i> Contact us</a>
+        <a href="http://www.igd.fraunhofer.de/en/competences/technologies/spatial-information-management" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-contact-mail" aria-hidden="true"></i> Contact us</a>
       </div>
     </div>
   </div>
