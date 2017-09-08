@@ -24,15 +24,25 @@ repositories {
 }
 
 configurations {
-    docs {
+    docs_1_0_0 {
+        transitive = false
+    }
+
+    docs_1_1_0 {
         transitive = false
     }
 }
 
 dependencies {
-    docs "io.georocket:georocket-docs:1.0.0:sources"
-    docs "io.georocket:georocket-client-api:1.0.0:javadoc"
-    docs "io.georocket:georocket-server-api:1.0.0:javadoc"
+    // 1.0.0
+    docs_1_0_0 "io.georocket:georocket-docs:1.0.0:sources"
+    docs_1_0_0 "io.georocket:georocket-client-api:1.0.0:javadoc"
+    docs_1_0_0 "io.georocket:georocket-server-api:1.0.0:javadoc"
+
+    // 1.1.0
+    docs_1_1_0 "io.georocket:georocket-docs:1.1.0-SNAPSHOT:sources"
+    docs_1_1_0 "io.georocket:georocket-client-api:1.1.0-SNAPSHOT:javadoc"
+    docs_1_1_0 "io.georocket:georocket-server-api:1.1.0-SNAPSHOT:javadoc"
 }
 
 gulp {
@@ -50,23 +60,36 @@ task wrapper(type: Wrapper) {
 
 task extractDocs << {
     // extract each 'docs' artifact to a separate directory
-    configurations.docs.resolvedConfiguration.resolvedArtifacts.each { artifact ->
-        copy {
-            from zipTree(artifact.file)
-            into new File(new File(docsSources, artifact.name), artifact.moduleVersion.id.version)
+    [configurations.docs_1_0_0, configurations.docs_1_1_0].each { cfg ->
+        cfg.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+            copy {
+                from zipTree(artifact.file)
+                into new File(new File(docsSources, artifact.name), artifact.moduleVersion.id.version)
+            }
         }
     }
 }
 
 task copyDocs(dependsOn: [extractDocs, asciidoctor]) << {
+    // copy latest version of user documentation
+    copy {
+        from new File(asciidoctor.outputDir, "html5/1.0.0")
+        into new File(srcGen, "georocket-docs-html")
+    }
+
+    // copy all versions of user documentation
     copy {
         from new File(asciidoctor.outputDir, "html5")
         into new File(srcGen, "georocket-docs-html")
     }
+
+    // copy client API
     copy {
         from new File(docsSources, "georocket-client-api")
         into new File(docs, "api/client")
     }
+
+    // copy server API
     copy {
         from new File(docsSources, "georocket-server-api")
         into new File(docs, "api/server")
@@ -85,8 +108,14 @@ task cleanUserDocs(type: Delete) {
 }
 
 asciidoctor {
-    sourceDir new File(docsSources, "georocket-docs/1.0.0")
+    sourceDir new File(docsSources, "georocket-docs")
     options template_dirs: ["${projectDir}/asciidoctor-backends"]
+
+    resources {
+        from(sourceDir) {
+            include "**/images/*"
+        }
+    }
 
     // disable idprefix and set id separator so that the Bootstrap scrollspy
     // plugin correctly finds headings

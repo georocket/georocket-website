@@ -3,5 +3,13 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.detectIndentation": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "java.configuration.updateBuildConfiguration": "disabled",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "build": true,
+      //"node_modules": true,
+      "site": true
+    }
 }

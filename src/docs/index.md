@@ -20,7 +20,15 @@ application.</p>
     its architecture. It describes how to install the server and the client and
     how to use the command-line interface. It also describes GeoRocket's
     functionality in detail.</p>
-    <a href="{{ site.url }}/docs/user-documentation" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-book-open-page-variant" aria-hidden="true"></i> Documentation 1.0.0</a>
+    <div class="btn-group" role="group">
+      <a href="{{ site.url }}/docs/user-documentation" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-book-open-page-variant" aria-hidden="true"></i> Documentation 1.0.0</a>
+      <div class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation">Latest stable</a>
+        <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.1.0-SNAPSHOT">1.1.0-SNAPSHOT</a>
+        <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.0.0">1.0.0</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -32,7 +40,15 @@ application.</p>
         <p class="card-text">Use the client API to access GeoRocket from your
         application through a well-defined interface. The client API uses
         GeoRocket's HTTP interface internally.</p>
-        <a href="{{ site.url }}/docs/api/client/1.0.0" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-xml" aria-hidden="true"></i> Javadoc 1.0.0</a>
+        <div class="btn-group" role="group">
+          <a href="{{ site.url }}/docs/api/client/1.0.0" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-xml" aria-hidden="true"></i> Javadoc 1.0.0</a>
+          <div class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.0.0">Latest stable</a>
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.1.0-SNAPSHOT">1.1.0-SNAPSHOT</a>
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.0.0">1.0.0</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -43,7 +59,15 @@ application.</p>
         <p class="card-text">The server API is a collection of interfaces you
         can implement to add new functionality to GeoRocket or change its
         behaviour.</p>
-        <a href="{{ site.url }}/docs/api/server/1.0.0" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-xml" aria-hidden="true"></i> Javadoc 1.0.0</a>
+        <div class="btn-group" role="group">
+          <a href="{{ site.url }}/docs/api/server/1.0.0" class="btn btn-primary btn-icon-separate"><i class="mdi mdi-xml" aria-hidden="true"></i> Javadoc 1.0.0</a>
+          <div class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.0.0">Latest stable</a>
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.1.0-SNAPSHOT">1.1.0-SNAPSHOT</a>
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.0.0">1.0.0</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
