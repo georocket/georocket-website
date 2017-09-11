@@ -26,8 +26,8 @@ hastitlelarge: true
         <p class="card-text mb-4 pb-3 mx-lg-4">More information about the Open-Source edition can be
         found on its <a href="https://github.com/georocket/georocket">GitHub page</a>. If you want to
         contribute features or bug fixes feel free to do so. Pull requests are welcome!</p>
-        <a href="https://github.com/georocket/georocket/releases/download/v1.0.0/georocket-server-1.0.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download server</a>
-        <a href="https://github.com/georocket/georocket/releases/download/v1.0.0/georocket-cli-1.0.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download CLI</a>
+        <a href="https://github.com/georocket/georocket/releases/download/v1.1.0/georocket-server-1.1.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download server</a>
+        <a href="https://github.com/georocket/georocket/releases/download/v1.1.0/georocket-cli-1.1.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download CLI</a>
       </div>
     </div>
     <div class="card text-center mb-3 py-2 ml-lg-3">
