@@ -1,7 +1,7 @@
 GeoRocket Website [![Build Status](https://travis-ci.org/georocket/georocket-website.svg?branch=master)](https://travis-ci.org/georocket/georocket-website)
 =================
 
-This is the source code of the GeoRocket website <http://georocket.io>.
+This is the source code of the GeoRocket website <https://georocket.io>.
 
 Building
 --------
