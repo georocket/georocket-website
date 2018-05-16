@@ -14,7 +14,7 @@ The Fraunhofer Institute for Computer Graphics Research IGD
 
 Fraunhoferstraße 5<br>
 64283 Darmstadt<br>
-<http://www.igd.fraunhofer.de>
+<https://www.igd.fraunhofer.de>
 
 is a constituent entity of the Fraunhofer-Gesellschaft, and as such has no separate legal status.
 
@@ -24,7 +24,7 @@ Hansastraße 27 c<br>
 80686 München<br>
 Phone: +49 89 1205- 0<br>
 Fax: +49 89 1205-7531<br>
-<http://www.fraunhofer.de>
+<https://www.fraunhofer.de>
 
 **VAT Identification Number** in accordance with §27 a VAT Tax Act: DE 129515865
 
@@ -44,8 +44,7 @@ Michel Krämer<br>
 Prof. Dr.-Ing. Reimund Neugebauer, President, Corporate Policy and Research Management<br>
 Prof. Dr. Georg Rosenfeld, Technology Marketing and Business Models<br>
 Prof. Dr. Alexander Kurz, Human Resources, Legal Affairs and IP Management<br>
-Prof. (Univ. Stellenbosch) Dr. Alfred Gossner, Finance, Controlling<br>
-(incl. Business Administration, Purchasing and Real Estate) and Information Systems
+Dipl.-Kfm. Andreas Meuer, Controlling and Digital Business Processes
 
 ## Usage Rights
 
@@ -60,7 +59,7 @@ Fraunhofer Institute for Computer Graphics Research IGD
 
 Fraunhoferstraße 5<br>
 64283 Darmstadt<br>
-<http://www.igd.fraunhofer.de>
+<https://www.igd.fraunhofer.de>
 
 Notwithstanding this requirement, material may be downloaded or printed for use in connection with press reports on the activities of the Fraunhofer-Gesellschaft and its constituent institutes, on condition that the following terms are complied with:
 
