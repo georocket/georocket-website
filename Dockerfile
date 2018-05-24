@@ -32,6 +32,7 @@ RUN apk -U add \
         php7-xmlreader \
         php7-xmlwriter \
         php7-zip \
+        php7-zlib \
     && rm -rf /var/cache/apk/*
 
 RUN echo "gzip_static on;" > /etc/nginx/conf.d/gzip_static.conf
