@@ -61,23 +61,23 @@
 <script src="{{ site.url }}/js/breakintable.min.js"></script>
 {% endif %}
 
-<!-- Piwik -->
+<!-- Matomo -->
 <script type="text/javascript">
   var _paq = _paq || [];
-  // tracker methods like "setCustomDimension" should be called before "trackPageView"
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://www.michel-kraemer.com/hidden_piwik/";
+    var u="//georocket.io/piwik/";
     _paq.push(['setTrackerUrl', u+'js/']);
-    _paq.push(['setSiteId', '4']);
+    _paq.push(['setSiteId', '1']);
     _paq.push(['setAPIUrl', u]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://www.michel-kraemer.com/hidden_piwik/js/?idsite=4&rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+<noscript><p><img src="//georocket.io/piwik/js/?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
 
 </body>
 </html>
