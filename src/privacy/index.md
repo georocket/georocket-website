@@ -125,8 +125,8 @@ Die Datenverarbeitung erfolgt auf Grund unseres berechtigten Interesses gemäß 
 
 <iframe
         style="border: 0; height: 200px; width: 600px;"
-        src="https://michelkraemer.com/hidden_piwik/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=&fontColor=&fontSize=&fontFamily="
-        >
+        src="https://georocket.io/piwik/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=&fontColor=292b2c&fontSize=20px&fontFamily=Lato"
+        ></iframe>
 
 ## 6. Betroffenenrechte
 
