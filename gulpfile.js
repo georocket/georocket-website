@@ -157,6 +157,18 @@ function build(done, dev) {
         "js/jquery.scrollme.min.js"))
     .use(assetFile(path.join(node_modules, "tether/dist/js/tether.min.js"),
         "js/tether.min.js"))
+    .use(assetFile(path.join(node_modules, "@mdi", "font", "css", "materialdesignicons.min.css"),
+        "css/materialdesignicons.min.css"))
+    .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.eot"),
+        "fonts/materialdesignicons-webfont.eot"))
+    .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.svg"),
+        "fonts/materialdesignicons-webfont.svg"))
+    .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.ttf"),
+        "fonts/materialdesignicons-webfont.ttf"))
+    .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.woff"),
+        "fonts/materialdesignicons-webfont.woff"))
+    .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.woff2"),
+        "fonts/materialdesignicons-webfont.woff2"))
 
     // copy javadocs
     .use(assets({
