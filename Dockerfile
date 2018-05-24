@@ -1,7 +1,38 @@
 FROM fholzer/nginx-brotli
 MAINTAINER Michel Kraemer <michel.kraemer@igd.fraunhofer.de>
 
-RUN apk -U add php5-fpm php5-json
+RUN apk -U add \
+        php7 \
+        php7-bcmath \
+        php7-dom \
+        php7-ctype \
+        php7-curl \
+        php7-fileinfo \
+        php7-fpm \
+        php7-gd \
+        php7-iconv \
+        php7-intl \
+        php7-json \
+        php7-mbstring \
+        php7-mcrypt \
+        php7-mysqlnd \
+        php7-opcache \
+        php7-openssl \
+        php7-pdo \
+        php7-pdo_mysql \
+        php7-pdo_pgsql \
+        php7-pdo_sqlite \
+        php7-phar \
+        php7-posix \
+        php7-simplexml \
+        php7-session \
+        php7-soap \
+        php7-tokenizer \
+        php7-xml \
+        php7-xmlreader \
+        php7-xmlwriter \
+        php7-zip \
+    && rm -rf /var/cache/apk/*
 
 RUN echo "gzip_static on;" > /etc/nginx/conf.d/gzip_static.conf
 RUN echo "brotli_static on;" > /etc/nginx/conf.d/brotli_static.conf
@@ -55,4 +86,4 @@ RUN apk add -U openssl && \
 
 COPY site /usr/share/nginx/html
 
-CMD /usr/bin/php-fpm5 -D; nginx -g "daemon off;"
+CMD /usr/sbin/php-fpm7 -D; nginx -g "daemon off;"
