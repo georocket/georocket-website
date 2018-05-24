@@ -25,6 +25,25 @@ RUN sed -i -e "s/location\s*\/\s*{/\0\n\
         expires 1d;\n\
         location ~ \/(js|css|images)\/ {\n\
             expires 7d;\n\
+        }\n\
+        location ~ \/(piwik)\/ {\n\
+            root  \/var\/www\/piwik;\n\
+            index index.php;\n\
+            location ~ [^\/]\\\\.php(\/|\$) {\n\
+                fastcgi_split_path_info ^(.+?\\\\.php)(\/.*)\$;\n\
+                if (!-f \$document_root\$fastcgi_script_name) {\n\
+                    return 404;\n\
+                }\n\
+                # Mitigate https:\/\/httpoxy.org\/ vulnerabilities\n\
+                fastcgi_param  HTTP_PROXY \"\";\n\
+                # Add params not defined in 'fastcgi_params'\n\
+                fastcgi_param  SCRIPT_FILENAME \$document_root\$fastcgi_script_name;\n\
+                fastcgi_param  PATH_INFO       \$fastcgi_path_info;\n\
+                fastcgi_param  PATH_TRANSLATED \$document_root\$fastcgi_script_name;\n\
+                fastcgi_pass   unix:\/var\/run\/php5-fpm.sock;\n\
+                fastcgi_index  index.php;\n\
+                include        fastcgi_params;\n\
+            }\n\
         }\
     /" /etc/nginx/conf.d/default.conf
 
