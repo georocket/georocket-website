@@ -1,6 +1,8 @@
 FROM fholzer/nginx-brotli
 MAINTAINER Michel Kraemer <michel.kraemer@igd.fraunhofer.de>
 
+RUN apk -U add php5-fpm
+
 RUN echo "gzip_static on;" > /etc/nginx/conf.d/gzip_static.conf
 RUN echo "brotli_static on;" > /etc/nginx/conf.d/brotli_static.conf
 RUN sed -i -e "s/server_name\s*localhost;/server_name georocket.io;\n\
@@ -27,7 +29,6 @@ RUN sed -i -e "s/location\s*\/\s*{/\0\n\
             expires 7d;\n\
         }\n\
         location ~ \/(piwik)\/ {\n\
-            root  \/var\/www\/piwik;\n\
             index index.php;\n\
             location ~ [^\/]\\\\.php(\/|\$) {\n\
                 fastcgi_split_path_info ^(.+?\\\\.php)(\/.*)\$;\n\
@@ -40,7 +41,7 @@ RUN sed -i -e "s/location\s*\/\s*{/\0\n\
                 fastcgi_param  SCRIPT_FILENAME \$document_root\$fastcgi_script_name;\n\
                 fastcgi_param  PATH_INFO       \$fastcgi_path_info;\n\
                 fastcgi_param  PATH_TRANSLATED \$document_root\$fastcgi_script_name;\n\
-                fastcgi_pass   unix:\/var\/run\/php5-fpm.sock;\n\
+                fastcgi_pass   127.0.0.1:9000;\n\
                 fastcgi_index  index.php;\n\
                 include        fastcgi_params;\n\
             }\n\
@@ -53,3 +54,5 @@ RUN apk add -U openssl && \
     apk del openssl
 
 COPY site /usr/share/nginx/html
+
+CMD /usr/bin/php-fpm5 -D; nginx -g "daemon off;"
