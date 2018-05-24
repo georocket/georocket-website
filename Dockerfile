@@ -1,7 +1,7 @@
 FROM fholzer/nginx-brotli
 MAINTAINER Michel Kraemer <michel.kraemer@igd.fraunhofer.de>
 
-RUN apk -U add php5-fpm
+RUN apk -U add php5-fpm php5-json
 
 RUN echo "gzip_static on;" > /etc/nginx/conf.d/gzip_static.conf
 RUN echo "brotli_static on;" > /etc/nginx/conf.d/brotli_static.conf
