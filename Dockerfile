@@ -44,16 +44,16 @@ RUN sed -i -e "s/server_name\s*localhost;/server_name georocket.io;\n\
     ssl_trusted_certificate ssl\/nginx.crt;\n\
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;\n\
     if (\$host ~ ^www\\\\.) {\n\
-    #    rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
-    #}\n\
-    #if (\$host = 'georocket-website.igd.fraunhofer.de') {\n\
-    #    rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
-    #}\n\
-    #if (\$host = 'georocket.org') {\n\
-    #    rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
-    #}\n\
-    #if (\$scheme != 'https') {\n\
-    #    rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
+        rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
+    }\n\
+    if (\$host = 'georocket-website.igd.fraunhofer.de') {\n\
+        rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
+    }\n\
+    if (\$host = 'georocket.org') {\n\
+        rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
+    }\n\
+    if (\$scheme != 'https') {\n\
+        rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
     }/" /etc/nginx/conf.d/default.conf
 RUN sed -i -e "s/location\s*\/\s*{/location \/piwik {\n\
         root \/usr\/share\/nginx\/html;\n\
