@@ -37,6 +37,10 @@ configurations {
     docs_1_2_0 {
         transitive = false
     }
+
+    docs_1_2_1 {
+        transitive = false
+    }
 }
 
 dependencies {
@@ -51,9 +55,14 @@ dependencies {
     docs_1_1_0 "io.georocket:georocket-server-api:1.1.0:javadoc"
 
     // 1.2.0
-    docs_1_2_0 "io.georocket:georocket-docs:1.2.0-SNAPSHOT:sources"
-    docs_1_2_0 "io.georocket:georocket-client-api:1.2.0-SNAPSHOT:javadoc"
-    docs_1_2_0 "io.georocket:georocket-server-api:1.2.0-SNAPSHOT:javadoc"
+    docs_1_2_0 "io.georocket:georocket-docs:1.2.0:sources"
+    docs_1_2_0 "io.georocket:georocket-client-api:1.2.0:javadoc"
+    docs_1_2_0 "io.georocket:georocket-server-api:1.2.0:javadoc"
+
+    // 1.2.1-SNAPSHOT
+    docs_1_2_1 "io.georocket:georocket-docs:1.2.1-SNAPSHOT:sources"
+    docs_1_2_1 "io.georocket:georocket-client-api:1.2.1-SNAPSHOT:javadoc"
+    docs_1_2_1 "io.georocket:georocket-server-api:1.2.1-SNAPSHOT:javadoc"
 }
 
 gulp {
@@ -66,13 +75,14 @@ node {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.4.1'
+    gradleVersion = '4.8.1'
 }
 
 task extractDocs {
     doLast {
         // extract each 'docs' artifact to a separate directory
-        [configurations.docs_1_0_0, configurations.docs_1_1_0, configurations.docs_1_2_0].each { cfg ->
+        [configurations.docs_1_0_0, configurations.docs_1_1_0,
+        configurations.docs_1_2_0, configurations.docs_1_2_1].each { cfg ->
             cfg.resolvedConfiguration.resolvedArtifacts.each { artifact ->
                 copy {
                     from zipTree(artifact.file)
@@ -87,7 +97,7 @@ task copyDocs(dependsOn: [extractDocs, asciidoctor]) {
     doLast {
         // copy latest version of user documentation
         copy {
-            from new File(asciidoctor.outputDir, "html5/1.1.0")
+            from new File(asciidoctor.outputDir, "html5/1.2.0")
             into new File(srcGen, "georocket-docs-html")
         }
 
