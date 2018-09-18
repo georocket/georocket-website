@@ -12,8 +12,8 @@ template: page.html
   <div class="row">
     <div class="col-md-8">
       <h1>It's not rocket science!</h1>
-      <h2 class="hidden-xs-down">GeoRocket is a high-performance data store for geospatial files</h2>
-      <a href="{{ site.url }}/try"><button type="button" class="btn btn-secondary hidden-sm-down try">Try GeoRocket v1.3.0</button></a>
+      <h2 class="d-none d-sm-block">GeoRocket is a high-performance data store for geospatial files</h2>
+      <a href="{{ site.url }}/try" class="d-none d-md-block"><button type="button" class="btn btn-secondary try">Try GeoRocket v1.3.0</button></a>
     </div>
     <div class="col-md-4">
       <img class="rocket" src="{{ site.url }}/images/rocket.svg">
@@ -44,7 +44,7 @@ template: page.html
 <hr class="featurette-divider">
 
 <div class="row featurette">
-<div class="col-md-7 push-md-5">
+<div class="col-md-7 order-md-2">
   <h2 class="featurette-heading"><span class="plus">+</span> Spatial queries</h2>
   <p>Powered by popular Open-Source framework <a href="https://www.elastic.co">Elasticsearch</a>,
   GeoRocket offers a wide range of <em>high-speed search features</em>. You can perform spatial queries and search for
@@ -52,7 +52,7 @@ template: page.html
   <p>GeoRocket will select only those features in the data store that match your request. They
   will be merged in their original form to a valid geospatial file.</p>
 </div>
-<div class="col-md-5 pull-md-7">
+<div class="col-md-5 order-md-1">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/spatial-queries.svg" alt="Spatial queries">
 </div>
 </div>
@@ -76,7 +76,7 @@ template: page.html
 <hr class="featurette-divider">
 
 <div class="row featurette">
-<div class="col-md-7 push-md-5">
+<div class="col-md-7 order-md-2">
   <h2 class="featurette-heading"><span class="plus">+</span> Enterprise and Open-Source</span></h2>
   <p>GeoRocket exists in two editions. <em>GeoRocket Pro</em> is a professional data store
   that meets enterprise requirements such as multi-tenancy, versioning or extended
@@ -86,7 +86,7 @@ template: page.html
   <p><em>GeoRocket OSS</em> is hosted on <a href="https://github.com/georocket/georocket">GitHub</a>
   and licensed under the Apache License, Version 2. Contributions are welcome!</p>
 </div>
-<div class="col-md-5 pull-md-7">
+<div class="col-md-5 order-md-1">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
 </div>
 </div>
@@ -117,7 +117,7 @@ template: page.html
       <h5>{{ post.date | date('MMMM, Do YYYY') }}</h5>
       <p><a href="{{ site.url }}/blog/{{ post.slug }}">{{ post.title }}</a></p>
       {%- endif %}{%- endfor %}
-      <a href="{{ site.url }}/blog" class="btn btn-secondary mb-4">View all</a>
+      <a href="{{ site.url }}/blog" class="btn btn-outline-secondary mb-4">View all</a>
     </div>
     <div class="col-md-6">
       <h2>Who we are</h2>

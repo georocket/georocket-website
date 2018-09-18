@@ -15,7 +15,7 @@ hastitlelarge: true
 <div class="container">
   <div class="d-lg-flex try-cards">
     <div class="card text-center mb-3 py-2 mr-lg-3">
-      <div class="card-block">
+      <div class="card-body">
         <h2 class="card-title">GeoRocket OSS</h2>
         <p class="lead">Open-Source Edition</p>
         <p class="card-text mb-4">
@@ -31,7 +31,7 @@ hastitlelarge: true
       </div>
     </div>
     <div class="card text-center mb-3 py-2 ml-lg-3">
-      <div class="card-block">
+      <div class="card-body">
         <h2 class="card-title">GeoRocket Pro</h2>
         <p class="lead">Professional Edition</p>
         <p class="card-text mb-4">

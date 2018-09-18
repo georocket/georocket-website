@@ -10,7 +10,7 @@ hastitlelarge: true
     <div class="row">
       <div class="col-md-7 text-md-left pb-4 pb-sm-5 pt-4 pb-md-0 pt-md-2 pt-lg-4">
         <h2>GeoRocket Products</h2>
-        <p class="hidden-md-down">Enterprise and Open-Source features</p>
+        <p class="d-none d-lg-block">Enterprise and Open-Source features</p>
       </div>
       <div class="col-md-5 px-5 px-sm-4 px-md-0">
         <img class="img-fluid" src="{{ site.url }}/images/products/georocket-pro.png">
@@ -219,8 +219,8 @@ set features = [
 <div class="compare-editions">
   <div class="compare-head compare-row">
     <div class="compare-col-1">&nbsp;</div>
-    <div class="compare-col-2"><span class="hidden-xs-down">GeoRocket </span>OSS</div>
-    <div class="compare-col-3"><span class="hidden-xs-down">GeoRocket </span>Pro</div>
+    <div class="compare-col-2"><span class="d-none d-sm-inline">GeoRocket </span>OSS</div>
+    <div class="compare-col-3"><span class="d-none d-sm-inline">GeoRocket </span>Pro</div>
   </div>
 {% for feature in features %}
   {% if feature.category %}
@@ -243,8 +243,8 @@ set features = [
 {% endfor %}
   <div class="compare-row">
     <div class="compare-col-1">&nbsp;</div>
-    <div class="compare-col-2"><a href="{{ site.url }}/try" class="btn btn-primary">Try <span class="hidden-sm-down"><span class="hidden-md-down">GeoRocket </span>OSS</span></a></div>
-    <div class="compare-col-3"><a href="{{ site.url }}/try" class="btn btn-primary">Try <span class="hidden-sm-down"><span class="hidden-md-down">GeoRocket </span>Pro</span></a></div>
+    <div class="compare-col-2"><a href="{{ site.url }}/try" class="btn btn-primary">Try <span class="d-none d-md-inline"><span class="d-none d-lg-inline">GeoRocket </span>OSS</span></a></div>
+    <div class="compare-col-3"><a href="{{ site.url }}/try" class="btn btn-primary">Try <span class="d-none d-md-inline"><span class="d-none d-lg-inline">GeoRocket </span>Pro</span></a></div>
   </div>
 </div>
 

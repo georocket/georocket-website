@@ -168,7 +168,7 @@ a.btn:focus {
 
     color: #aaa;
     &:hover {
-        color: $gray-dark;
+        color: $gray-900;
     }
 
     @include media-breakpoint-down(md) {
@@ -363,7 +363,7 @@ a.btn:focus {
 
     // hide h2 if there is not enough space vertically
     @media (max-height: 600px) {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -436,6 +436,30 @@ button.try {
   }
 }
 
+.btn-primary {
+  background-color: #486583;
+  border-color: #486583;
+
+  &:hover, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):active,
+      .show>&.dropdown-toggle {
+    background-color: darken(#486583, 7.5%);
+    border-color: darken(#486583, 10%);
+  }
+}
+
+.btn-secondary {
+  border-color: #ccc;
+}
+
+.btn-outline-secondary {
+  color: $gray-900;
+  border-color: #ccc;
+  &:hover {
+    color: $gray-900;
+    background-color: $gray-200;
+  }
+}
+
 .featurette {
   img {
     width: 100%;
@@ -458,7 +482,7 @@ button.try {
   background-color: $brand-dark-blue;
   width: 100%;
   color: #fff;
-  font-size: $font-size-h2;
+  font-size: $h2-font-size;
   padding: 3 * $spacer 0;
   margin: $spacer * 3 0;
 
@@ -499,7 +523,7 @@ button.try {
   }
 
   h5 {
-    color: $gray;
+    color: $gray-700;
   }
 }
 
@@ -512,13 +536,6 @@ pre code {
   border-radius: $border-radius;
 }
 
-.bottom-banner {
-  background-color: $gray-lighter;
-  margin-top: 3 * $spacer;
-  padding-top: 3 * $spacer;
-  padding-bottom: 3 * $spacer;
-}
-
 footer {
   margin-top: 4 * $spacer;
   padding-top: 2 * $spacer;
@@ -529,7 +546,21 @@ footer {
 
   .navbar-brand, .pseudo-brand {
     text-transform: uppercase;
-    color: $gray-lighter;
+    color: $gray-200;
+  }
+
+  .pseudo-brand {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .navbar-expand {
+      .navbar-nav, .navbar-collapse {
+        flex-direction: column;
+      }
+    }
   }
 
   a {
@@ -566,10 +597,6 @@ footer {
       }
     }
   }
-
-  .bottom-banner + & {
-    margin-top: 0;
-  }
 }
 
 .compare-editions {
@@ -586,7 +613,7 @@ footer {
     width: 25%;
     min-width: 4rem;
     margin-left: $spacer * 2;
-    background-color: $gray-lightest;
+    background-color: $gray-100;
     padding: $spacer 0;
     align-items: center;
     justify-content: center;
@@ -614,7 +641,7 @@ footer {
   .compare-row {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-200;
 
     &:first-child, &:last-child {
       border-bottom: none;
@@ -626,7 +653,7 @@ footer {
   }
 
   .compare-category-row {
-    border-top: 3px solid $gray-lighter;
+    border-top: 3px solid $gray-200;
     border-bottom: none;
     &.first-row {
       border-top: none;
@@ -642,7 +669,7 @@ footer {
   }
 
   .description {
-    color: $gray-light;
+    color: $gray-600;
     font-weight: 300;
     font-size: $font-size-base * 0.8;
     max-width: 300px;
@@ -675,7 +702,7 @@ footer {
 
   @include media-breakpoint-down(xs) {
     .btn {
-      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $font-size-base, $btn-border-radius-sm);
       margin: $spacer 0;
     }
   }

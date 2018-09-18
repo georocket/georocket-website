@@ -1,10 +1,9 @@
 // Colors
 //
 
-$brand-primary:             #1965b2;
+$blue:                      #1965b2;
 $brand-dark-blue:           #2d3f50;
 $brand-orange:              #ee5b1c;
-
 
 // Typography
 //
@@ -16,14 +15,14 @@ $font-size-base:             1.25rem;
 
 $lead-font-size:             1.5rem;
 
-
-// Buttons
-//
-// For each of Bootstrap's buttons, define text, background and border color.
-
-$btn-primary-bg:                 #486583;
-
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
 
 // Navbar
 
 $navbar-padding-x:                  0;
+$navbar-brand-font-size:            $font-size-base;

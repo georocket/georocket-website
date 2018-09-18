@@ -153,6 +153,8 @@ function build(done, dev) {
         "js/jquery.min.js"))
     .use(assetFile(path.join(node_modules, "jquery.dotdotdot/src/jquery.dotdotdot.min.js"),
         "js/jquery.dotdotdot.min.js"))
+    .use(assetFile(path.join(node_modules, "popper.js/dist/umd/popper.min.js"),
+        "js/popper.min.js"))
     .use(assetFile(path.join(node_modules, "scrollme/jquery.scrollme.min.js"),
         "js/jquery.scrollme.min.js"))
     .use(assetFile(path.join(node_modules, "tether/dist/js/tether.min.js"),

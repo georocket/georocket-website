@@ -7,3 +7,4 @@ site/
 src/docs/user-documentation/
 .project
 *.sublime-workspace
+yarn-error.log
