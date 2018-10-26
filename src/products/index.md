@@ -73,7 +73,7 @@ set features = [
   },
   {
     "title": "Binary files",
-    "description": "Store textures, orthophotos and other geospatial file formats",
+    "description": "Store textures, orthophotos, and digital terrain models",
     "pro": true
   },
   {
@@ -87,6 +87,12 @@ set features = [
   {
     "title": "File system",
     "description": "Store chunks on your local hard drive",
+    "oss": true,
+    "pro": true
+  },
+  {
+    "title": "H2",
+    "description": "Fast and lightweight embedded database on your local hard drive (default back-end)",
     "oss": true,
     "pro": true
   },
@@ -123,13 +129,13 @@ set features = [
     "pro": true
   },
   {
-    "title": "Web visualization",
-    "description": "Data stored in GeoRocket can be visualized in 2D and 3D in a web browser",
+    "title": "2D web visualization",
+    "description": "Data stored in GeoRocket can be visualized and interactively analyzed in 2D in a web browser",
     "pro": true
   },
   {
-    "title": "Cluster metrics",
-    "description": "Detailed information about GeoRocket's status, work load and performance",
+    "title": "3D web visualization",
+    "description": "Export data to an interactive and high-performance 3D web visualization",
     "pro": true
   },
   {
@@ -158,11 +164,6 @@ set features = [
     "pro": true
   },
   {
-    "title": "Encryption",
-    "description": "Secure your data in the Cloud against unauthorized access",
-    "pro": true
-  },
-  {
     "category": "Data management"
   },
   {
@@ -176,22 +177,12 @@ set features = [
     "pro": true
   },
   {
-    "title": "Versioning",
-    "description": "Store multiple versions of your data and access the history",
-    "pro": true
-  },
-  {
     "category": "Deployment"
   },
   {
     "title": "Cloud-ready",
     "description": "GeoRocket is reactive, scalable and ready for the Cloud",
     "oss": true,
-    "pro": true
-  },
-  {
-    "title": "Serverless",
-    "description": "Run GeoRocket on a serverless infrastructure such as AWS Lambda",
     "pro": true
   },
   {
