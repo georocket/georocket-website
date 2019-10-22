@@ -19,7 +19,7 @@
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.7",
     "jquery.dotdotdot": "https://github.com/FrDH/jQuery.dotdotdot.git",
-    "lodash": "^4.12.0",
+    "lodash": "^4.17.13",
     "md5": "^2.2.1",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
