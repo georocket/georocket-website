@@ -1687,13 +1687,9 @@ isstream@~0.1.2:
   version "1.8.3"
   resolved "https://github.com/FrDH/jQuery.dotdotdot.git#779ab93d259c3a67c45b2f80124aa8391ef49165"
 
-jquery@>=1.8:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
-
-jquery@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+jquery@>=1.8, jquery@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.0.tgz#8de513fa0fa4b2c7d2e48a530e26f0596936efdf"
 
 js-base64@^2.1.8:
   version "2.4.9"
