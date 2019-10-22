@@ -36,7 +36,6 @@ RUN apk -U add \
     && rm -rf /var/cache/apk/*
 
 RUN echo "gzip_static on;" > /etc/nginx/conf.d/gzip_static.conf
-RUN echo "brotli_static on;" > /etc/nginx/conf.d/brotli_static.conf
 RUN sed -i -e "s/server_name\s*localhost;/server_name georocket.io;\n\
     listen 443 ssl http2;\n\
     ssl_certificate ssl\/nginx.crt;\n\
