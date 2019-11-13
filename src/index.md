@@ -13,7 +13,7 @@ template: page.html
     <div class="col-md-8">
       <h1>It's not rocket science!</h1>
       <h2 class="d-none d-sm-block">GeoRocket is a high-performance data store for geospatial files</h2>
-      <a href="{{ site.url }}/try" class="d-none d-md-block"><button type="button" class="btn btn-secondary try">Try GeoRocket v1.3.0</button></a>
+      <a href="{{ site.url }}/download" class="d-none d-md-block"><button type="button" class="btn btn-secondary download">Download v1.3.0</button></a>
     </div>
     <div class="col-md-4">
       <img class="rocket" src="{{ site.url }}/images/rocket.svg">
@@ -95,14 +95,14 @@ template: page.html
 </div>
 </div>
 
-<div class="home-try-container">
+<div class="home-download-container">
   <div class="container">
     <div class="row">
       <div class="col-md-9">
         The latest GeoRocket release is version 1.3.0
       </div>
       <div class="col-md-3">
-        <a href="{{ site.url }}/try"><button type="button" class="btn btn-secondary try">Try GeoRocket</button></a>
+        <a href="{{ site.url }}/download"><button type="button" class="btn btn-secondary download">Download GeoRocket</button></a>
       </div>
     </div>
   </div>

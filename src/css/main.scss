@@ -403,7 +403,7 @@ a.btn:focus {
   }
 }
 
-button.try {
+button.download {
   font-size: 20px;
   padding: 10px 20px;
   background-color: transparent;
@@ -416,7 +416,7 @@ button.try {
   }
 }
 
-.nav-link.try {
+.nav-link.download {
   border: $input-btn-border-width solid #ccc;
   @extend .rounded;
   padding: .4rem 1.1rem;
@@ -478,7 +478,7 @@ button.try {
   margin: $spacer * 3 0;
 }
 
-.home-try-container {
+.home-download-container {
   background-color: $brand-dark-blue;
   width: 100%;
   color: #fff;
@@ -501,7 +501,7 @@ button.try {
   }
 }
 
-.page-try .try-cards .card {
+.page-download .download-cards .card {
   @include media-breakpoint-up(lg) {
     width: 50%;
   }

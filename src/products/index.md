@@ -234,8 +234,8 @@ set features = [
 {% endfor %}
   <div class="compare-row">
     <div class="compare-col-1">&nbsp;</div>
-    <div class="compare-col-2"><a href="{{ site.url }}/try" class="btn btn-primary">Try <span class="d-none d-md-inline"><span class="d-none d-lg-inline">GeoRocket </span>OSS</span></a></div>
-    <div class="compare-col-3"><a href="{{ site.url }}/try" class="btn btn-primary">Try <span class="d-none d-md-inline"><span class="d-none d-lg-inline">GeoRocket </span>Pro</span></a></div>
+    <div class="compare-col-2"><a href="{{ site.url }}/download" class="btn btn-primary">Download <span class="d-none d-md-inline"><span class="d-none d-lg-inline">GeoRocket </span>OSS</span></a></div>
+    <div class="compare-col-3"><a href="{{ site.url }}/download" class="btn btn-primary">Download <span class="d-none d-md-inline"><span class="d-none d-lg-inline">GeoRocket </span>Pro</span></a></div>
   </div>
 </div>
 

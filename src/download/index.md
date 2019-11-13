@@ -1,25 +1,25 @@
 ---
-id: try
+id: download
 template: page.html
-title: Try GeoRocket
+title: Download GeoRocket
 hastitlelarge: true
 ---
 
 <div class="title-large">
   <div class="container">
-    <h1>Try GeoRocket</h1>
+    <h1>Download GeoRocket</h1>
     <p class="lead">Select from the following two editions</p>
   </div>
 </div>
 
 <div class="container">
-  <div class="d-lg-flex try-cards">
+  <div class="d-lg-flex download-cards">
     <div class="card text-center mb-3 py-2 mr-lg-3">
       <div class="card-body">
         <h2 class="card-title">GeoRocket OSS</h2>
         <p class="lead">Open-Source Edition</p>
         <p class="card-text mb-4">
-        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/try/georocket-oss-cli.jpg">
+        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/download/georocket-oss-cli.jpg">
         </p>
         <p class="card-text">The Open-Source edition of GeoRocket can be downloaded and tested
         for free. It's fully functional, contains many features and suits most use cases.</p>
@@ -35,7 +35,7 @@ hastitlelarge: true
         <h2 class="card-title">GeoRocket Pro</h2>
         <p class="lead">Professional Edition</p>
         <p class="card-text mb-4">
-        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/try/georocket-pro-ground-station.jpg">
+        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/download/georocket-pro-ground-station.jpg">
         </p>
         <p class="card-text">The professional edition of GeoRocket is
         suitable for advanced use cases and enterprise applications.
