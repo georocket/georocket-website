@@ -1,4 +1,4 @@
-var _ = require("lodash");
+const _ = require("lodash");
 
 /**
  * Set the metadata properties 'url' and 'id' based on the property 'slug'

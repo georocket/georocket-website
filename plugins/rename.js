@@ -1,5 +1,5 @@
-var async = require("async");
-var match = require("multimatch");
+const async = require("async");
+const match = require("multimatch");
 
 function rename(pattern, renameCallback) {
   return function(files, metalsmith, done) {
@@ -11,8 +11,8 @@ function rename(pattern, renameCallback) {
         return;
       }
 
-      var newName = renameCallback(file);
-      var f = files[file];
+      let newName = renameCallback(file);
+      let f = files[file];
       delete files[file];
       files[newName] = f;
       done();

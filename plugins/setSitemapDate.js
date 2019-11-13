@@ -1,5 +1,5 @@
-var _ = require("lodash");
-var moment = require("moment");
+const _ = require("lodash");
+const moment = require("moment");
 
 /**
  * Convert 'date' property to a 'sitemapDate' property suitable for sitemap.xml

@@ -1,9 +1,9 @@
-var async = require("async");
-var extend = require("extend");
-var fs = require("fs");
-var match = require("multimatch");
-var nunjucks = require("nunjucks");
-var nunjucksDate = require("nunjucks-date");
+const async = require("async");
+const extend = require("extend");
+const fs = require("fs");
+const match = require("multimatch");
+const nunjucks = require("nunjucks");
+const nunjucksDate = require("nunjucks-date");
 
 /**
  * Applies the nunjucks template engine. Code has been copied from the
@@ -13,13 +13,13 @@ var nunjucksDate = require("nunjucks-date");
  */
 function templates(opts) {
     opts = opts || {};
-    var dir = opts.directory || 'templates';
-    var pattern = opts.pattern;
-    var inPlace = opts.inPlace;
-    var dev = opts.dev;
+    let dir = opts.directory || 'templates';
+    let pattern = opts.pattern;
+    let inPlace = opts.inPlace;
+    let dev = opts.dev;
 
     return function(files, metalsmith, done) {
-        var metadata = metalsmith.metadata();
+        let metadata = metalsmith.metadata();
 
         async.each(Object.keys(files), convert, done);
 
@@ -28,8 +28,8 @@ function templates(opts) {
                 return false;
             }
 
-            var data = files[file];
-            var tmpl = data.template;
+            let data = files[file];
+            let tmpl = data.template;
             if (!inPlace && !tmpl) {
                 return false;
             }
@@ -42,9 +42,9 @@ function templates(opts) {
                 return done();
             }
 
-            var data = files[file];
+            let data = files[file];
 
-            var str;
+            let str;
             if (inPlace) {
                 str = data.contents.toString();
             } else {
@@ -52,8 +52,8 @@ function templates(opts) {
                 str = str.toString();
             }
 
-            var clone = extend({}, metadata, data);
-            var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(dir, {
+            let clone = extend({}, metadata, data);
+            let env = new nunjucks.Environment(new nunjucks.FileSystemLoader(dir, {
                 noCache: dev
             }));
             nunjucksDate.install(env);

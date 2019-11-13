@@ -1,43 +1,43 @@
-var colors = require("ansi-colors");
-var connect = require("connect");
-var compress = require("compression");
-var del = require("del");
-var fs = require("fs");
-var gulp = require("gulp");
-var log = require("fancy-log");
-var md5 = require("md5");
-var path = require("path");
-var prettyHrtime = require("pretty-hrtime");
-var serveStatic = require("serve-static");
+const colors = require("ansi-colors");
+const connect = require("connect");
+const compress = require("compression");
+const del = require("del");
+const fs = require("fs");
+const gulp = require("gulp");
+const log = require("fancy-log");
+const md5 = require("md5");
+const path = require("path");
+const prettyHrtime = require("pretty-hrtime");
+const serveStatic = require("serve-static");
 
-var Metalsmith = require("metalsmith");
-var applySlugToPosts = require("./plugins/applySlugToPosts");
-var assetFile = require("./plugins/assetFile");
-var assets = require("metalsmith-assets");
-var branch = require("metalsmith-branch");
-var brotli = require("metalsmith-brotli");
-var collections = require("metalsmith-collections");
-var dateInFilename = require("metalsmith-date-in-filename");
-var define = require("metalsmith-define");
-var excerpts = require("metalsmith-excerpts");
-var gzip = require("metalsmith-gzip");
-var htmlMinifier = require("metalsmith-html-minifier");
-var markdown = require("metalsmith-markdown-remarkable");
-var paginate = require("metalsmith-paginate");
-var rename = require("./plugins/rename");
-var sass = require("metalsmith-sass");
-var setSitemapDate = require("./plugins/setSitemapDate");
-var setUrlAndId = require("./plugins/setUrlAndId");
-var sitemap = require("metalsmith-sitemap");
-var slugFromFilename = require("./plugins/slugFromFilename");
-var templates = require("./plugins/templates");
-var uglify = require("metalsmith-uglify");
+const Metalsmith = require("metalsmith");
+const applySlugToPosts = require("./plugins/applySlugToPosts");
+const assetFile = require("./plugins/assetFile");
+const assets = require("metalsmith-assets");
+const branch = require("metalsmith-branch");
+const brotli = require("metalsmith-brotli");
+const collections = require("metalsmith-collections");
+const dateInFilename = require("metalsmith-date-in-filename");
+const define = require("metalsmith-define");
+const excerpts = require("metalsmith-excerpts");
+const gzip = require("metalsmith-gzip");
+const htmlMinifier = require("metalsmith-html-minifier");
+const markdown = require("metalsmith-markdown-remarkable");
+const paginate = require("metalsmith-paginate");
+const rename = require("./plugins/rename");
+const sass = require("metalsmith-sass");
+const setSitemapDate = require("./plugins/setSitemapDate");
+const setUrlAndId = require("./plugins/setUrlAndId");
+const sitemap = require("metalsmith-sitemap");
+const slugFromFilename = require("./plugins/slugFromFilename");
+const templates = require("./plugins/templates");
+const uglify = require("metalsmith-uglify");
 
-var authors = require("./authors.json");
+const authors = require("./authors.json");
 
-var node_modules = "node_modules";
+const node_modules = "node_modules";
 
-var paths = {
+const paths = {
   site: "site",
   src: "src",
   src_docs_md: "build/src-gen/georocket-docs-md",
@@ -46,15 +46,15 @@ var paths = {
 };
 
 function build(done, dev) {
-  var canonicalUrl = "https://georocket.io";
-  var siteUrl = canonicalUrl;
+  let canonicalUrl = "https://georocket.io";
+  let siteUrl = canonicalUrl;
   if (dev) {
     siteUrl = "http://localhost:4000";
   }
 
   // calculate gravatar URLs for all authors
   Object.keys(authors).forEach(author => {
-    var a = authors[author];
+    let a = authors[author];
     a.gravatar = "https://www.gravatar.com/avatar/" + md5(a.email);
   });
 
@@ -218,39 +218,44 @@ function build(done, dev) {
     .build(done);
 }
 
-gulp.task("build", function(done) {
-  build(done);
-});
-
-gulp.task("buildDev", function(done) {
+function buildDev(done) {
   build(done, true);
-});
+}
 
-gulp.task("watch", gulp.series("buildDev", function() {
+function clean() {
+  return del([paths.site]);
+}
+
+function watch() {
   // start web server
-  var app = connect();
+  let app = connect();
+ 
   app.use(compress());
   app.use(serveStatic(paths.site, {
     "index": ["index.html", "index.htm"]
   }));
+
   app.listen(4000, function() {
     log("Listening on port", colors.cyan("4000"), "...");
   });
 
-  return gulp.watch([
-      path.join(paths.src, "**", "*"),
-      path.join(paths.templates, "**", "*")
-    ], function(done) {
+  let sources = [
+    path.join(paths.src, "**", "*"),
+    path.join(paths.templates, "**", "*")
+  ];
+
+  return gulp.watch(sources, function(done) {
     log("Rebuilding ...");
-    var start = process.hrtime();
+    let start = process.hrtime();
     build(function() {
       log("Finished", "'" + colors.cyan("rebuilding") + "'",
           "after", colors.magenta(prettyHrtime(process.hrtime(start))));
       done();
     }, true);
   });
-}));
+}
 
-gulp.task("clean", () => del([paths.site]));
-
-gulp.task("default", gulp.series("build"));
+exports.build = build;
+exports.clean = clean;
+exports.watch = gulp.series(buildDev, watch);
+exports.default = gulp.series(build);

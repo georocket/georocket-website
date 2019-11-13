@@ -1,4 +1,4 @@
-var _ = require("lodash");
+const _ = require("lodash");
 
 /**
  * Extract slug from file name with pattern YYYY-mm-dd-<permalink>.ext and
@@ -7,7 +7,7 @@ var _ = require("lodash");
 function slugFromFilename() {
   return function(files, metalsmith, done) {
     _.forEach(files, function(fileMeta, fileName) {
-      var m;
+      let m;
       if (m = fileName.match(/\d{4}-\d{2}-\d{2}-(.*)\..*$/)) {
         fileMeta.slug = m[1];
       } else if (m = fileName.match(/(.*)[\\\/]index\..*$/)) {
