@@ -165,7 +165,7 @@ asciidoctor {
 
 asciidoctor.dependsOn(extractDocs)
 
-gulp_build.dependsOn copyDocs, prepareUserDocs, yarn_install
+gulp_build.dependsOn copyDocs, prepareUserDocs, npm_install
 
 assemble.dependsOn gulp_build
 clean.dependsOn cleanUserDocs, cleanNodeModules

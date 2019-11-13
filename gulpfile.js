@@ -1,9 +1,10 @@
+var colors = require("ansi-colors");
 var connect = require("connect");
 var compress = require("compression");
 var del = require("del");
 var fs = require("fs");
 var gulp = require("gulp");
-var gutil = require("gulp-util");
+var log = require("fancy-log");
 var md5 = require("md5");
 var path = require("path");
 var prettyHrtime = require("pretty-hrtime");
@@ -151,7 +152,7 @@ function build(done, dev) {
         "js/bootstrap.min.js"))
     .use(assetFile(path.join(node_modules, "jquery/dist/jquery.min.js"),
         "js/jquery.min.js"))
-    .use(assetFile(path.join(node_modules, "jquery.dotdotdot/src/jquery.dotdotdot.min.js"),
+    .use(assetFile(path.join(node_modules, "dotdotdot-js/dist/dotdotdot.js"),
         "js/jquery.dotdotdot.min.js"))
     .use(assetFile(path.join(node_modules, "popper.js/dist/umd/popper.min.js"),
         "js/popper.min.js"))
@@ -225,7 +226,7 @@ gulp.task("buildDev", function(done) {
   build(done, true);
 });
 
-gulp.task("watch", ["buildDev"], function() {
+gulp.task("watch", gulp.series("buildDev", function() {
   // start web server
   var app = connect();
   app.use(compress());
@@ -233,24 +234,23 @@ gulp.task("watch", ["buildDev"], function() {
     "index": ["index.html", "index.htm"]
   }));
   app.listen(4000, function() {
-    gutil.log("Listening on port", gutil.colors.cyan("4000"), "...");
+    log("Listening on port", colors.cyan("4000"), "...");
   });
 
   return gulp.watch([
       path.join(paths.src, "**", "*"),
       path.join(paths.templates, "**", "*")
-    ], {}, function() {
-    gutil.log("Rebuilding ...");
+    ], function(done) {
+    log("Rebuilding ...");
     var start = process.hrtime();
     build(function() {
-      gutil.log("Finished", "'" + gutil.colors.cyan("rebuilding") + "'",
-          "after", gutil.colors.magenta(prettyHrtime(process.hrtime(start))));
+      log("Finished", "'" + colors.cyan("rebuilding") + "'",
+          "after", colors.magenta(prettyHrtime(process.hrtime(start))));
+      done();
     }, true);
   });
-});
+}));
 
-gulp.task("clean", function(cb) {
-  del([paths.site], cb);
-});
+gulp.task("clean", () => del([paths.site]));
 
-gulp.task("default", ["build"]);
+gulp.task("default", gulp.series("build"));
