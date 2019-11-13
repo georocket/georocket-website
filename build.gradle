@@ -79,7 +79,7 @@ gulp {
 }
 
 node {
-    version = new File(projectDir, ".nvmrc").text.trim()
+    version = new File(projectDir, ".tool-versions").text.split(/\s+/)[1]
     download = true
 }
 
