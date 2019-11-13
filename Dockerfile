@@ -79,8 +79,8 @@ RUN sed -i -e "s/location\s*\/\s*{/location \/piwik {\n\
         location ~ \/(js|css|images)\/ {\n\
            expires 7d;\n\
         }\n\
-        location ~ \/(try)\/ {\n\
-           return 301 \/download;\n\
+        location ~ \/(try)\/? {\n\
+           return 301 \/download\/;\n\
         }\
     /" /etc/nginx/conf.d/default.conf
 
