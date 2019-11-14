@@ -601,7 +601,7 @@ footer {
 
 .compare-editions {
   width: 100%;
-  margin-top: $spacer * 4;
+  margin-top: $spacer * 2;
   margin-bottom: $spacer * 3;
 
   .compare-col-1 {
@@ -610,9 +610,10 @@ footer {
   }
 
   .compare-col-2, .compare-col-3 {
-    width: 25%;
-    min-width: 4rem;
+    width: 33%;
+    min-width: 8rem;
     margin-left: $spacer * 2;
+    margin-right: $spacer;
     background-color: $gray-100;
     padding: $spacer 0;
     align-items: center;
