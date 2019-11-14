@@ -1,7 +1,7 @@
 ---
-id: products
+id: features
 template: page.html
-title: Products
+title: Features
 hastitlelarge: true
 ---
 
@@ -13,7 +13,7 @@ hastitlelarge: true
         <p class="d-none d-lg-block">Here's a list of things GeoRocket can do</p>
       </div>
       <div class="col-md-5 px-5 px-sm-4 px-md-0">
-        <img class="img-fluid" src="{{ site.url }}/images/products/georocket-cli-screen.png">
+        <img class="img-fluid" src="{{ site.url }}/images/features/georocket-cli-screen.png">
       </div>
     </div>
   </div>

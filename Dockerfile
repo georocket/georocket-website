@@ -81,6 +81,9 @@ RUN sed -i -e "s/location\s*\/\s*{/location \/piwik {\n\
         }\n\
         location ~ \/(try)\/? {\n\
            return 301 \/download\/;\n\
+        }\n\
+        location ~ \/(products)\/? {\n\
+           return 301 \/features\/;\n\
         }\
     /" /etc/nginx/conf.d/default.conf
 
