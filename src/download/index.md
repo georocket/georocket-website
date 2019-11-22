@@ -8,7 +8,7 @@ hastitlelarge: true
 <div class="title-large">
   <div class="container">
     <h1>Download GeoRocket</h1>
-    <p class="lead">Select from the following two editions</p>
+    <p class="lead">Choose from the following download options</p>
   </div>
 </div>
 
@@ -16,41 +16,27 @@ hastitlelarge: true
   <div class="d-lg-flex download-cards">
     <div class="card text-center mb-3 py-2 mr-lg-3">
       <div class="card-body">
-        <h2 class="card-title">GeoRocket OSS</h2>
-        <p class="lead">Open-Source Edition</p>
+        <h2 class="card-title">Command-line interface (CLI)</h2>
         <p class="card-text mb-4">
-        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/download/georocket-oss-cli.jpg">
+        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/download/georocket-cli.png">
         </p>
-        <p class="card-text">The Open-Source edition of GeoRocket can be downloaded and tested
-        for free. It's fully functional, contains many features and suits most use cases.</p>
-        <p class="card-text mb-4 pb-3 mx-lg-4">More information about the Open-Source edition can be
-        found on its <a href="https://github.com/georocket/georocket">GitHub page</a>. If you want to
-        contribute features or bug fixes feel free to do so. Pull requests are welcome!</p>
-        <a href="https://github.com/georocket/georocket/releases/download/v1.3.0/georocket-server-1.3.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download server</a>
-        <a href="https://github.com/georocket/georocket/releases/download/v1.3.0/georocket-cli-1.3.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download CLI</a>
+        <p class="card-text">The command-line interface (CLI) lets you interact with
+        the GeoRocket server in a convenient way on your command prompt. You can import
+        and export files, search the data store, and do many other things.</p>
+        <a href="https://github.com/georocket/georocket/releases/download/v1.3.0/georocket-cli-1.3.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download CLI v1.3.0</a>
       </div>
     </div>
     <div class="card text-center mb-3 py-2 ml-lg-3">
       <div class="card-body">
-        <h2 class="card-title">GeoRocket Pro</h2>
-        <p class="lead">Professional Edition</p>
+        <h2 class="card-title">Server</h2>
         <p class="card-text mb-4">
-        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/download/georocket-pro-ground-station.jpg">
+        <img class="img-fluid mt-3 mb-3" style="max-width:50%" src="{{ site.url }}/images/download/georocket-server.png">
         </p>
-        <p class="card-text">The professional edition of GeoRocket is
-        suitable for advanced use cases and enterprise applications.
-        It contains additional features such as a graphical user interface (GUI),
-        user authentication, more indexers, encryption, and other
-        service interfaces.</p>
-        <p class="card-text mx-lg-4 mb-4 pb-3">If you want to test GeoRocket Pro please contact
-        us for further information.</p>
-        <a href="http://www.igd.fraunhofer.de/en/competences/technologies/spatial-information-management" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-contact-mail" aria-hidden="true"></i> Contact us</a>
+        <p class="card-text">GeoRocket server is the main component storing your
+        geospatial files in the Cloud. It is scalable and can be deployed in various ways.
+        You can interact with it through its HTTP API or the command-line interface.</p>
+        <a href="https://github.com/georocket/georocket/releases/download/v1.3.0/georocket-server-1.3.0.zip" class="btn btn-primary btn-icon-separate mb-4"><i class="mdi mdi-download" aria-hidden="true"></i> Download server v1.3.0</a>
       </div>
     </div>
-  </div>
-
-  <div class="text-center mt-3 mb-5 py-5 jumbotron">
-    <h2>Compare the GeoRocket editions</h2>
-    <a href="{{ site.url }}/features" class="btn btn-primary btn-icon-separate mt-4"><i class="mdi mdi-view-list" aria-hidden="true"></i> Complete list of features</a>
   </div>
 </div>
