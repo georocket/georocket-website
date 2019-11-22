@@ -77,14 +77,12 @@ template: page.html
 
 <div class="row featurette">
 <div class="col-md-7 order-md-2">
-  <h2 class="featurette-heading"><span class="plus">+</span> Enterprise and Open-Source</span></h2>
-  <p>GeoRocket exists in two editions. <em>GeoRocket Pro</em> is a professional data store
-  that meets enterprise requirements such as multi-tenancy, versioning or extended
-  search features. Compared to this, the <em>Open-Source</em> version of GeoRocket offers
-  limited functionality but is still powerful enough for most applications.</p>
-
-  <p><em>GeoRocket OSS</em> is hosted on <a href="https://github.com/georocket/georocket">GitHub</a>
-  and licensed under the Apache License, Version 2. Contributions are welcome!</p>
+  <h2 class="featurette-heading"><span class="plus">+</span> Open-Source</span></h2>
+  <p>GeoRocket is a free Open-Source software. You can use it in personal
+  projects as well as commercial products without any fees.</p>
+  <p>The source code of GeoRocket is hosted on
+  <a href="https://github.com/georocket/georocket">GitHub</a>.
+  It is licensed under the Apache License, Version 2. Contributions are very welcome!</p>
 </div>
 <div class="col-md-5 order-md-1">
   <img class="featurette-image img-fluid center-block" src="{{ site.url }}/images/open-source.svg" alt="GeoRocket is Open-Source">
