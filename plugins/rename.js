@@ -1,9 +1,9 @@
-const async = require("async");
+const each = require("async/each");
 const match = require("multimatch");
 
 function rename(pattern, renameCallback) {
   return function(files, metalsmith, done) {
-    async.each(Object.keys(files), doRename, done);
+    each(Object.keys(files), doRename, done);
 
     function doRename(file, done) {
       if (!match(file, pattern)[0]) {

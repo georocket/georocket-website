@@ -1,4 +1,4 @@
-const async = require("async");
+const each = require("async/each");
 const extend = require("extend");
 const fs = require("fs");
 const match = require("multimatch");
@@ -21,7 +21,7 @@ function templates(opts) {
     return function(files, metalsmith, done) {
         let metadata = metalsmith.metadata();
 
-        async.each(Object.keys(files), convert, done);
+        each(Object.keys(files), convert, done);
 
         function check(file) {
             if (pattern && !match(file, pattern)[0]) {

@@ -4,6 +4,7 @@ const compress = require("compression");
 const del = require("del");
 const fs = require("fs");
 const gulp = require("gulp");
+const linkify = require("remarkable/linkify").linkify;
 const log = require("fancy-log");
 const md5 = require("md5");
 const path = require("path");
@@ -119,9 +120,8 @@ function build(done, dev) {
     // convert markdown to HTML
     .use(markdown({
       html: true,
-      linkify: true,
       typographer: true
-    }))
+    }).use(linkify))
 
     // move posts to their own subdirectory
     .use(applySlugToPosts())
@@ -142,9 +142,12 @@ function build(done, dev) {
 
     // minify javascripts
     .use(uglify({
-      preserveComments: "some",
       removeOriginal: true,
-      sourceMap: dev
+      uglify: {
+        output: {
+          comments:"some"
+        }
+      }
     }))
 
     // copy required javascripts (already minified)
@@ -164,8 +167,6 @@ function build(done, dev) {
         "css/materialdesignicons.min.css"))
     .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.eot"),
         "fonts/materialdesignicons-webfont.eot"))
-    .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.svg"),
-        "fonts/materialdesignicons-webfont.svg"))
     .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.ttf"),
         "fonts/materialdesignicons-webfont.ttf"))
     .use(assetFile(path.join(node_modules, "@mdi", "font", "fonts", "materialdesignicons-webfont.woff"),
@@ -194,16 +195,16 @@ function build(done, dev) {
       .use(sitemap({
         urlProperty: "url",
         hostname: siteUrl,
-        modifiedProperty: "sitemapDate",
-        defaults: {
-          changefreq: "weekly"
-        }
+        modifiedProperty: "sitemapDate"
       }))
     )
 
     // minify HTML
     .use(htmlMinifier({
-      minifyJS: true
+      minifierOptions: {
+        minifyJS: true,
+        minifyCSS: true
+      }
     }))
 
     // generate compressed files
