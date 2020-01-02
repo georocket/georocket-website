@@ -62,7 +62,7 @@ function templates(opts) {
                     return done(err);
                 }
 
-                data.contents = new Buffer(str);
+                data.contents = Buffer.from(str);
                 done();
             });
         }
