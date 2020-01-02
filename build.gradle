@@ -42,7 +42,7 @@ configurations {
         transitive = false
     }
 
-    docs_1_3_1 {
+    docs_1_4_0 {
         transitive = false
     }
 }
@@ -68,10 +68,10 @@ dependencies {
     docs_1_3_0 "io.georocket:georocket-client-api:1.3.0:javadoc"
     docs_1_3_0 "io.georocket:georocket-server-api:1.3.0:javadoc"
 
-    // 1.3.1-SNAPSHOT
-    docs_1_3_1 "io.georocket:georocket-docs:1.3.1-SNAPSHOT:sources"
-    docs_1_3_1 "io.georocket:georocket-client-api:1.3.1-SNAPSHOT:javadoc"
-    docs_1_3_1 "io.georocket:georocket-server-api:1.3.1-SNAPSHOT:javadoc"
+    // 1.4.0-SNAPSHOT
+    docs_1_4_0 "io.georocket:georocket-docs:1.4.0-SNAPSHOT:sources"
+    docs_1_4_0 "io.georocket:georocket-client-api:1.4.0-SNAPSHOT:javadoc"
+    docs_1_4_0 "io.georocket:georocket-server-api:1.4.0-SNAPSHOT:javadoc"
 }
 
 gulp {
@@ -92,7 +92,7 @@ task extractDocs {
         // extract each 'docs' artifact to a separate directory
         [configurations.docs_1_0_0, configurations.docs_1_1_0,
         configurations.docs_1_2_0, configurations.docs_1_3_0,
-        configurations.docs_1_3_1].each { cfg ->
+        configurations.docs_1_4_0].each { cfg ->
             cfg.resolvedConfiguration.resolvedArtifacts.each { artifact ->
                 copy {
                     from zipTree(artifact.file)

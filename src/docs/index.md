@@ -25,7 +25,7 @@ application.</p>
       <div class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-reference="parent" aria-haspopup="true" aria-expanded="false"></div>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation">Latest stable</a>
-        <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.3.1-SNAPSHOT">1.3.1-SNAPSHOT</a>
+        <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.4.0-SNAPSHOT">1.4.0-SNAPSHOT</a>
         <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.3.0">1.3.0</a>
         <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.2.0">1.2.0</a>
         <a class="dropdown-item" href="{{ site.url }}/docs/user-documentation/1.1.0">1.1.0</a>
@@ -48,7 +48,7 @@ application.</p>
           <div class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-reference="parent" aria-haspopup="true" aria-expanded="false"></div>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.3.0">Latest stable</a>
-            <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.3.1-SNAPSHOT">1.3.1-SNAPSHOT</a>
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.4.0-SNAPSHOT">1.4.0-SNAPSHOT</a>
             <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.3.0">1.3.0</a>
             <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.2.0">1.2.0</a>
             <a class="dropdown-item" href="{{ site.url }}/docs/api/client/1.1.0">1.1.0</a>
@@ -70,7 +70,7 @@ application.</p>
           <div class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-reference="parent" aria-haspopup="true" aria-expanded="false"></div>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.3.0">Latest stable</a>
-            <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.3.1-SNAPSHOT">1.3.1-SNAPSHOT</a>
+            <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.4.0-SNAPSHOT">1.4.0-SNAPSHOT</a>
             <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.3.0">1.3.0</a>
             <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.2.0">1.2.0</a>
             <a class="dropdown-item" href="{{ site.url }}/docs/api/server/1.1.0">1.1.0</a>
