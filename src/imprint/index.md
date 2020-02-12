@@ -42,7 +42,7 @@ Michel Krämer<br>
 ## Executive Board
 
 Prof. Dr.-Ing. Reimund Neugebauer, President, Corporate Policy and Research Management<br>
-Prof. Dr. Georg Rosenfeld, Technology Marketing and Business Models<br>
+Prof. Dr. Ralf Boris Wehrspohn, Technology Marketing and Business Models<br>
 Prof. Dr. Alexander Kurz, Human Resources, Legal Affairs and IP Management<br>
 Dipl.-Kfm. Andreas Meuer, Controlling and Digital Business Processes
 
