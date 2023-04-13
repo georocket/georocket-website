@@ -43,7 +43,7 @@ Wenn Sie unsere Webseiten besuchen, speichern die Webserver unserer Webseite tem
 * IP-Adresse des anfragenden Rechners
 * Datum und Uhrzeit des Zugriffs
 * Name und URL der abgerufenen Daten
-* Übertragene Datenmenge 
+* Übertragene Datenmenge
 * Meldung, ob der Abruf erfolgreich war
 * Verwendeter Browser und Betriebssystem
 * Name des Internet-Zugangs-Providers
@@ -59,8 +59,8 @@ Die Verarbeitung dieser Daten erfolgt zu folgenden Zwecken:
 
 Rechtsgrundlagen für die vorstehenden Verarbeitungen sind
 
-* für die Verarbeitung für den Besuch der Webseiten nach den Nummern 1-2 Art. 6 Abs. 1 S.1 lit. b (Erforderlichkeit für die Erfüllung des Webseiten-Nutzungvertragsverhältnisses), 
-* für die Verarbeitungen nach Nummer 3 Art. 6 Abs. 1 S.1 lit. c DSGVO (rechtliche Verpflichtung zur Umsetzung technisch-organisatorischer Maßnahmen zur Sicherung der Datenverarbeitung nach Art. 32 DSGVO) und Art. 6 Abs. 1 S.1 lit. f DSGVO (berechtigte Interessen zur Datenverarbeitung für die Netz- und Informationssicherheit) sowie für 
+* für die Verarbeitung für den Besuch der Webseiten nach den Nummern 1-2 Art. 6 Abs. 1 S.1 lit. b (Erforderlichkeit für die Erfüllung des Webseiten-Nutzungvertragsverhältnisses),
+* für die Verarbeitungen nach Nummer 3 Art. 6 Abs. 1 S.1 lit. c DSGVO (rechtliche Verpflichtung zur Umsetzung technisch-organisatorischer Maßnahmen zur Sicherung der Datenverarbeitung nach Art. 32 DSGVO) und Art. 6 Abs. 1 S.1 lit. f DSGVO (berechtigte Interessen zur Datenverarbeitung für die Netz- und Informationssicherheit) sowie für
 * die Verarbeitungen nach den Nummern 4-5 Art. 6 Abs. 1 S.1 lit. f DSGVO (berechtigte Interessen). Die berechtigten Interessen unserer Datenverarbeitung bestehen darin, unser Angebot nutzerfreundlich zu gestalten und zu optimieren.
 
 Die vorstehend genannten Daten werden nach einer definierten Zeit vom Webserver automatisiert gelöscht, die 30 Tage beträgt. Sofern Daten zu Zwecken nach Nummern 2-5 länger verarbeitet werden, erfolgt die Anonymisierung oder Löschung, wenn die Speicherung für den jeweiligen Zweck nicht mehr erforderlich ist.
@@ -73,7 +73,7 @@ Es besteht die Möglichkeit Artikel und Blogeinträge auf unserer Webseite öffe
 
 Im Rahmen der Nutzung der Kommentierungsfunktion erheben wir folgende Pflichtangaben:
 
-* Name und 
+* Name und
 * E-Mail-Adresse.
 
 Statt Ihres Namens können Sie auch ein Pseudonym angeben. Ihre E-Mail-Adresse ist für das Absenden des Kommentars erforderlich, wird aber nicht mit Ihrem Kommentar veröffentlicht. Wir nutzen Ihre E-Mail-Adresse nur, um Sie über eine Reaktion auf Ihren Kommentar zu informieren.
@@ -111,26 +111,9 @@ Die durch Cookies verarbeiteten Daten sind für die genannten Zwecke zur Wahrung
 
 Die meisten Browser akzeptieren Cookies automatisch. Sie können Ihren Browser jedoch so konfigurieren, dass keine Cookies auf Ihrem Computer gespeichert werden oder stets ein Hinweis erscheint, bevor ein neuer Cookie angelegt wird. Die vollständige Deaktivierung von Cookies kann jedoch dazu führen, dass Sie nicht alle Funktionen unserer Website nutzen können.
 
-## 5. Webanalyse/Tracking
+## 5. Betroffenenrechte
 
-Wir setzen auf unserer Webseite den Open-Source-Dienst Matomo von InnoCraft Ltd aus Neuseeland ein, um das Nutzerverhalten bei Besuch unserer Seite zu analysieren und unsere Seite und deren Inhalte entsprechend darauf basierend zu optimieren. Dabei erhalten wir keine Informationen, die Sie unmittelbar identifizieren.
-
-Im Zusammenhang mit dem Einsatz von Matomo werden Cookies eingesetzt, die eine statistische Analyse der Nutzung dieser Website durch Ihre Besuche ermöglichen. In dem Cookie werden Informationen - einschließlich personenbezogener Informationen - zu Ihrem Besucherverhalten abgelegt und unter Verwendung eines Pseudonyms in einem Nutzungsprofil zum Zwecke der Analyse verarbeitet. Da Matomo auf unseren eigenen Server gehostet wird, ist für die Analyse eine Verarbeitung durch Dritte nicht erforderlich.
-
-Die dabei gewonnenen Daten werden ohne Ihre gesondert erteilte Zustimmung nicht benutzt, um Sie persönlich zu identifizieren und die Daten werden nicht mit personenbezogenen Daten über Sie als Träger des Pseudonyms zusammengeführt.
-
-Soweit IP-Adressen erhoben werden, werden diese unverzüglich nach Erhebung durch Löschen des letzten Nummernblocks anonymisiert. Weitere personenbezogene Daten in dem Cookie werden nach 30 Tagen gelöscht.
-
-Die Datenverarbeitung erfolgt auf Grund unseres berechtigten Interesses gemäß Art. 6 Abs.1 lit. f DSGVO an der Optimierung unseres Online-Angebotes und unseres Webauftritts
-
-<iframe
-        style="border: 0; height: 200px; width: 600px;"
-        src="https://georocket.io/piwik/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=&fontColor=292b2c&fontSize=20px&fontFamily=Lato"
-        ></iframe>
-
-## 6. Betroffenenrechte
-
-Sie haben das Recht: 
+Sie haben das Recht:
 
 * gemäß Art. 7 Abs. 3 DSGVO Ihre einmal erteilte Einwilligung jederzeit gegenüber uns zu widerrufen. Dies hat zur Folge, dass wir die Datenverarbeitung, die auf dieser Einwilligung beruhte, für die Zukunft nicht mehr fortführen dürfen;
 * gemäß Art. 15 DSGVO Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen. Insbesondere können Sie Auskunft über die Verarbeitungszwecke, die Kategorie der personenbezogenen Daten, die Kategorien von Empfängern, gegenüber denen Ihre Daten offengelegt wurden oder werden, die geplante Speicherdauer, das Bestehen eines Rechts auf Berichtigung, Löschung, Einschränkung der Verarbeitung oder Widerspruch, das Bestehen eines Beschwerderechts, die Herkunft ihrer Daten, sofern diese nicht bei uns erhoben wurden, sowie über das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling und ggf. aussagekräftigen Informationen zu deren Einzelheiten verlangen;
@@ -150,19 +133,19 @@ Sofern sich Ihr Widerspruch gegen eine Verarbeitung von Daten zum Zwecke der Dir
 
 Möchten Sie von Ihrem Widerspruchsrecht Gebrauch machen, genügt eine E-Mail an datenschutz@zv.fraunhofer.de.
 
-## 8. Datensicherheit
+## 6. Datensicherheit
 
 Alle von Ihnen persönlich übermittelten Daten werden mit dem allgemein üblichen und sicheren Standard TLS (Transport Layer Security) verschlüsselt übertragen. TLS ist ein sicherer und erprobter Standard, der z.B. auch beim Onlinebanking Verwendung findet. Sie erkennen eine sichere TLS-Verbindung unter anderem an dem angehängten s am http (also https://..) in der Adressleiste Ihres Browsers oder am Schloss-Symbol im unteren Bereich Ihres Browsers.
 
 Wir bedienen uns im Übrigen geeigneter technischer und organisatorischer Sicherheitsmaßnahmen, um Ihre Daten gegen zufällige oder vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust, Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen. Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert.
 
-## 9. Aktualität und Änderung dieser Datenschutzinformation
+## 7. Aktualität und Änderung dieser Datenschutzinformation
 
 Diese Datenschutzinformation ist aktuell gültig und hat den Stand Mai 2018.
 
 Durch die Weiterentwicklung unserer Webseite und Angebote darüber oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzinformation zu ändern. Die jeweils aktuelle Datenschutzinformation kann jederzeit auf der Webseite unter {{ site.url }}/privacy von Ihnen abgerufen und ausgedruckt werden.
 
-## 10. Salvatorische Klausel
+## 8. Salvatorische Klausel
 
 Sollten einzelne Bestimmungen dieser Datenschutzerklärung ganz oder in Teilen unwirksam oder undurchführbar sein oder werden, berührt dies nicht die Wirksamkeit der übrigen Bestimmungen. Entsprechendes gilt im Fall von Lücken.
 

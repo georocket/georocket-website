@@ -33,7 +33,7 @@
     "metalsmith-html-minifier": "^4.0.0",
     "metalsmith-markdown-remarkable": "^1.0.1",
     "metalsmith-paginate": "^0.3.0",
-    "metalsmith-sass": "^1.7.0",
+    "metalsmith-sass": "^2.0.0",
     "metalsmith-sitemap": "^1.2.2",
     "metalsmith-templates": "^0.7.0",
     "metalsmith-uglify": "^2.3.3",
@@ -50,6 +50,7 @@
     "@mdi/font": "^4.7.95",
     "dotdotdot-js": "4.0.10",
     "jquery": "^3.4.0",
+    "node-sass": "^8.0.0",
     "popper.js": "^1.16.0"
   }
 }
