@@ -41,10 +41,10 @@ Michel Krämer<br>
 
 ## Executive Board
 
-Prof. Dr.-Ing. Reimund Neugebauer, President, Corporate Policy and Research Management<br>
-Prof. Dr. Ralf Boris Wehrspohn, Technology Marketing and Business Models<br>
-Prof. Dr. Alexander Kurz, Human Resources, Legal Affairs and IP Management<br>
-Dipl.-Kfm. Andreas Meuer, Controlling and Digital Business Processes
+Dr. Sandra Krey | Member of the Executive Board | leads the Fraunhofer-Gesellschaft on an interim basis<br>
+Prof. Dr. Alexander Kurz | Member of the Executive Board<br>
+Prof. Dr. Axel Müller-Groeling | Member of the Executive Board<br>
+Ass. jur. Elisabeth Ewen | Member of the Executive Board
 
 ## Usage Rights
 
