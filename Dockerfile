@@ -16,6 +16,7 @@ RUN sed -i -e "s/server_name\s*localhost;/server_name georocket.io;\n\
     add_header Strict-Transport-Security "max-age=63072000" always;\n\
     ssl_stapling on;\n\
     ssl_stapling_verify on;\n\
+    add_header X-Frame-Options "SAMEORIGIN";\n\
     if (\$host ~ ^www\\\\.) {\n\
         rewrite ^ https:\/\/georocket.io\$uri permanent;\n\
     }\n\
